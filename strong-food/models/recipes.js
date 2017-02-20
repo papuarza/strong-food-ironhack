@@ -38,11 +38,11 @@ const RecipeSchema = new Schema({
 
 const Recipe = mongoose.model('Recipe', RecipeSchema);
 
-CampaignSchema.methods.belongsTo = function(comments){
+RecipeSchema.methods.belongsTo = function(comments){
   return this._rates.equals(comments._id);
 };
 
-CampaignSchema.methods.belongsTo = function(user){
+RecipeSchema.methods.belongsTo = function(user){
   return this._creator.equals(user._id);
 }
 

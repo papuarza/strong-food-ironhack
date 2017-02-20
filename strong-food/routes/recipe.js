@@ -2,6 +2,7 @@ const express = require('express');
 const router  = express.Router();
 const passport = require('passport');
 const { ensureLoggedIn, ensureLoggedOut } = require('connect-ensure-login');
+const Recipe = require('../models/recipes')
 
 router.get('/create', ensureLoggedOut(), (req, res) => {
     res.render('recipe/create');
@@ -12,27 +13,18 @@ router.get('/get-recipes', (req, res) => {
 });
 
 router.post('/get-recipes', (req, res) => {
-    console.log(req.body)
+  const body = req.body.recipes;
+  console.log("hola")
+  body.forEach(function(elem){
+    console.log(elem)
+    const recipe = new Recipe(elem)
+    recipe.save(function (err, doc) {
+      if (err) return next(err);
+      console.log(doc);
+    });
+  });
+
 });
 
-
-// router.post('/login', ensureLoggedOut(), passport.authenticate('local-login', {
-//   successRedirect : '/',
-//   failureRedirect : '/login'
-// }));
-//
-// router.get('/signup', ensureLoggedOut(), (req, res) => {
-//     res.render('user/signup');
-// });
-//
-// router.post('/signup', ensureLoggedOut(), passport.authenticate('local-signup', {
-//   successRedirect : '/',
-//   failureRedirect : '/signup'
-// }));
-//
-// router.post('/logout', ensureLoggedIn(), (req, res) => {
-//     req.logout();
-//     res.redirect('/');
-// });
 
 module.exports = router;
