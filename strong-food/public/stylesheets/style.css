@@ -12,6 +12,15 @@ a {
   padding-top: 25px;
 }
 
+.container {
+  margin-right: 0px;
+  margin-left: 10px;
+}
+
+.container-fluid {
+  padding: 0px;
+}
+
 nav.navbar {
   box-shadow: 0px 4px 10px 0 rgba(22,22,22,0.08);
   margin-bottom: 0;
@@ -57,6 +66,10 @@ nav.navbar {
   transform: translate(-50%, -50%);
 }
 
+.thumbnail {
+  border: 0px;
+}
+
 .home-heading-wrapper > h1 {
   font-size: 9rem;
 }
@@ -76,4 +89,87 @@ nav.navbar {
   height: 22vh;
   padding: 0 30%;
   position: relative;
+}
+
+.food-title {
+  font-weight: 700;
+  margin: 2vh 0px 0px 0px;
+  color: #484848;
+
+  font-size: 12px;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+}
+
+.food-subtitle {
+  font-weight: 100;
+  margin: 1vh 0px 0px 0px;
+  display: inline-flex;
+  color: #484848;
+  font-size: 13px;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+}
+
+.food-dificulty {
+  font-weight: 300;
+  margin: 1vh 0px 0px 0px;
+  color: #C1292E;
+  display: inline-flex;
+  font-size: 13px;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+}
+
+.img-container {
+  background-position: center;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.img-food {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.food-likes {
+  display: inline-flex;
+  padding: 0px 7vh 0px 3px;
+}
+
+.thumbnail .caption {
+  padding: 0px;
+  margin: 0px;
+}
+
+.icon {
+  display: inline-flex;
+}
+
+.recipe-div {
+  height: 380px;
+}
+
+.filters {
+  border-right: : 1px solid #C16266;
+}
+
+#ex1Slider .slider-selection {
+	background: #BABABA;
+}
+
+.main-img-food {
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 60vh;
+  margin: 0px;
+}
+
+.background-food-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(4px);
 }

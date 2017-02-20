@@ -14,16 +14,31 @@ router.get('/get-recipes', (req, res) => {
 
 router.post('/get-recipes', (req, res) => {
   const body = req.body.recipes;
-  console.log("hola")
   body.forEach(function(elem){
-    console.log(elem)
     const recipe = new Recipe(elem)
     recipe.save(function (err, doc) {
       if (err) return next(err);
-      console.log(doc);
+      console.log("guardado");
     });
   });
+});
 
+router.get('/show-recipes', (req, res) => {
+  Recipe.find({}, function(err, recipes){
+      if (err) return next (err);
+      // console.log(recipes)
+        res.render('recipe/show', {recipes});
+    });
+});
+
+router.get('/recipes/:id', (req, res) => {
+  const id = req.params.id
+  console.log(id)
+  Recipe.findOne({_id: id}, function (err, recipe) {
+    console.log(recipe)
+    if (err) return next(err)
+    res.render('recipe/show-one', {recipe})
+  })
 });
 
 

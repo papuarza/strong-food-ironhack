@@ -1,0 +1,18 @@
+<%console.log(recipe)%>
+<div class="container-fluid">
+  <div class="row main-img-food">
+    <img src="<%=recipe.imgUrl%>" alt="" class="background-food-img">
+  </div>
+  <div class="row">
+    <div class="col-sm-12 col-md-6">
+      <h2>Ingredients</h2>
+      <ul>
+      <%recipe.ingredients.forEach(function(elem){%>
+        <li><%=elem%></li>
+      <%})%>
+      </ul>
+    </div>
+    <div class="col-sm-12 col-md-6">
+    </div>
+  </div>
+</div>

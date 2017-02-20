@@ -89,12 +89,18 @@ function getSteps(food){
 
 function getDificulty(food){
   let time = food.results[0].readyInMinutes;
-  if (time<20){
+  if (time<40){
     dificulty = "SuperStarterChef"
-  }else if (time<40){
+  }else if (time<70){
         dificulty = "ChefWannaBe"
   } else {
         dificulty = "MasterChef"
   }
   return dificulty;
 }
+
+var slider = new Slider('#ex1', {
+	formatter: function(value) {
+		return 'Current value: ' + value;
+	}
+});
