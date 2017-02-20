@@ -1,7 +1,7 @@
-body {
-  padding: 50px;
+/*body {*/
+  /*padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+}*/
 
 a {
   color: #00B7FF;
@@ -56,10 +56,24 @@ nav.navbar {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
 .home-heading-wrapper > h1 {
   font-size: 9rem;
 }
 
 .home-heading-wrapper > p {
   font-size: 2rem;
+}
+.sub-footer {
+  background-color: #2B2C28;
+  height: 30vh;
+  padding: 0 30%;
+  position: relative;
+}
+
+.footer {
+  background-color: #393A35 ;
+  height: 22vh;
+  padding: 0 30%;
+  position: relative;
 }

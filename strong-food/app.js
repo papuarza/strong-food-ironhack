@@ -11,6 +11,7 @@ const session            = require('express-session');
 const MongoStore         = require('connect-mongo')(session);
 const users              = require('./routes/users.js');
 const index              = require('./routes/index');
+const recipe              = require('./routes/recipe');
 
 const LocalStrategy      = require('passport-local').Strategy;
 const User               = require('./models/user');
@@ -71,12 +72,11 @@ passport.use('local-signup', new LocalStrategy(
                 return next(null, false);
             } else {
                 // Destructure the body
-                const { username, email, description, password } = req.body;
+                const { username, email, password } = req.body;
                 const hashPass = bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
                 const newUser = new User({
                   username,
                   email,
-                  description,
                   password: hashPass
                 });
 
@@ -121,6 +121,7 @@ app.use( (req, res, next) => {
 
 app.use('/', index);
 app.use('/', users);
+app.use('/', recipe);
 // app.use('/campaigns', campaignRoutes);
 // app.use('/', rewardRoutes);
 
