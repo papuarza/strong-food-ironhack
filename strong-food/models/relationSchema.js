@@ -11,6 +11,7 @@ const RelationSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'Recipe'
     },
+    cooked: Boolean
 });
 
 const Relation = mongoose.model('Relation', RelationSchema);

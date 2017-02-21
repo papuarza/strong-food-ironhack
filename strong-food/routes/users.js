@@ -7,6 +7,8 @@ const {
     ensureLoggedOut
 } = require('connect-ensure-login');
 const User = require('../models/user');
+const Recipe = require('../models/recipes');
+const Relation = require('../models/relationSchema');
 
 router.get('/login', ensureLoggedOut(), (req, res) => {
     res.render('user/login');
@@ -32,10 +34,34 @@ router.post('/logout', ensureLoggedIn(), (req, res) => {
 
 router.get('/profile', ensureLoggedIn(), (req, res) => {
     user = req.user;
+    const recipesSaved = [];
     console.log(user);
-    res.render('user/profile', {
-        user
+    Relation.find({
+        user: req.user._id
+    }, (err, relation) => {
+        if (err) {
+            return next(err);
+        }
+        relation.forEach(function(elem, indexOf, arr) {
+            elem.populate('recipe', (err, recipes) => {
+                if (err) {
+                    return next(err);
+                }
+                if (indexOf < arr.length - 1) {
+                    recipesSaved.push(recipes.recipe);
+                } else {
+                    recipesSaved.push(recipes.recipe);
+                    res.render('user/profile', {
+                        user: user,
+                        recipesSaved: recipesSaved
+                    });
+                }
+            });
+        });
     });
+
+
+
 });
 
 router.get('/edit/:id', ensureLoggedIn(), (req, res) => {

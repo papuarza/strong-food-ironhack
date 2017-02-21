@@ -56,7 +56,7 @@ function createModel(food) {
         success: showFeedback,
         error: handleError
     });
-};
+}
 
 function showFeedback(postResponse) {
     console.log('post success');
@@ -80,7 +80,7 @@ function getIngredients(food) {
         if ($.inArray(el, uniqueIngredients) === -1) uniqueIngredients.push(el);
     });
     return uniqueIngredients;
-};
+}
 
 function getSteps(food) {
     let steps = [];
@@ -88,16 +88,16 @@ function getSteps(food) {
         steps.push(elem.step);
     });
     return steps;
-};
+}
 
 function getDificulty(food) {
     let time = food.results[0].readyInMinutes;
     if (time < 40) {
-        dificulty = "SuperStarterChef"
+        dificulty = "SuperStarterChef";
     } else if (time < 70) {
-        dificulty = "ChefWannaBe"
+        dificulty = "ChefWannaBe";
     } else {
-        dificulty = "MasterChef"
+        dificulty = "MasterChef";
     }
     return dificulty;
 }
