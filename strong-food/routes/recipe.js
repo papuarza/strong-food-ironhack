@@ -23,7 +23,7 @@ router.post('/get-recipes', (req, res) => {
   });
 });
 
-router.get('/show-recipes', (req, res) => {
+router.get('/show-recipes', ensureLoggedIn(),  (req, res) => {
   Recipe.find({}, function(err, recipes){
       if (err) return next (err);
       // console.log(recipes)
@@ -31,7 +31,7 @@ router.get('/show-recipes', (req, res) => {
     });
 });
 
-router.get('/recipes/:id', (req, res) => {
+router.get('/recipes/:id', ensureLoggedIn(), (req, res) => {
   const id = req.params.id
   console.log(id)
   Recipe.findOne({_id: id}, function (err, recipe) {

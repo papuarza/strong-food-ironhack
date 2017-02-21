@@ -1,5 +1,5 @@
 $.ajax({
-      url: "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/searchComplex?addRecipeInformation=true&fillIngredients=false&instructionsRequired=true&limitLicense=false&maxCalories=5000&maxCarbs=5000&maxFat=5000&maxProtein=5000&minCalories=1&minCarbs=1&minFat=1&minProtein=1&number=20&offset=0&query=beans&ranking=1&excludeIngredients=anchovies",
+      url: "https://spoonacular-recipe-food-nutrition-v1.p.mashape.com/recipes/searchComplex?addRecipeInformation=true&fillIngredients=false&instructionsRequired=true&limitLicense=false&maxCalories=5000&maxCarbs=5000&maxFat=5000&maxProtein=5000&minCalories=1&minCarbs=1&minFat=1&minProtein=1&number=50&offset=0&query=salad&ranking=1&excludeIngredients=anchovies",
       headers: {
         "X-Mashape-Key":"tJIWsmWwMQmshiO3xh51NdiuhqKJp1uhRC2jsnWEAsZKQhSs5E",
         "Accept":"application/json"

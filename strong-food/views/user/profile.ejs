@@ -1,0 +1,81 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-4">
+      <div class="profile-pic-container">
+        <img src="<%=user.imgUrl%>" alt="" class="profile-pic">
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-8">
+      <h2 class="username-profile"> <%=user.username%></h2>
+      <h3 class="email-profile"><%=user.email%></h3>
+      <h3 class="info-profile">Age&nbsp;&nbsp;<strong> <%=user.birthday.getFullYear()%></strong> &nbsp;&nbsp;| </h3>
+      <h3 class="info-profile">&nbsp;Genre&nbsp;&nbsp; <strong> <%=user.genere%></strong>&nbsp;&nbsp; | </h3>
+      <h3 class="info-profile">&nbsp;Height&nbsp;&nbsp; <strong> <%=user.heigth%></strong>&nbsp;&nbsp; | </h3>
+      <h3 class="info-profile">&nbsp;Weight&nbsp;&nbsp; <strong> <%=user.weight%></strong></h3>
+      <div class="">
+          <img src="img/favorite.png" alt="" class="profile-icon"><h6 class="profile-info-icons"><strong><%=user.recipesSaved.length%></strong>&nbsp;&nbsp;&nbsp;recipes saved</h6>
+      </div>
+      <div class="">
+        <img src="img/chef-hat.png" alt="" class="profile-icon"><h6 class="profile-info-icons"><strong><%=user.recipesDone.length%></strong>&nbsp;&nbsp;&nbsp;recipes made</h6>
+      </div>
+      <div class="buttons-row">
+        <a href="/show-recipes"><div class="recipes-look">LOOK RECIPES</div></a>
+        <a href="edit/<%=user._id%>"><div class="edit-profile">Edit Profile</div></a>
+      </div>
+    </div>
+  </div>
+  <h3 class="latest-title">COOKED RECIPES</h3>
+  <h4 class="latest-subtitle">CHECK THE MOST YUMMY COOKED RECIPES</h4>
+  <div class="row">
+    <div class="col-sm-12 col-md-10">
+      <%user.recipesDone.forEach(function(elem){%>
+      <div class="col-sm-6 col-md-4 recipe-div">
+        <a href="recipes/<%=elem._id%>">
+        <div class="thumbnail">
+          <div class="img-container">
+            <img src="<%=elem.imgUrl%>" alt="" class="img-food">
+          </div>
+          <div class="caption">
+            <h4 class="food-title"><%=elem.name%></h4>
+            <h5 class="food-dificulty"><%=elem.preparation.dificulty%> | </h5><h5 class="food-subtitle"> | Calories: <%=elem.nutritionalInfo.calories%></h5>
+            <div class="info-food">
+              <span class="glyphicon glyphicon-thumbs-up icon" aria-hidden="true"></span><h6 class="food-likes"><%=elem.likes%></h6>
+              <span class="glyphicon glyphicon-heart icon" aria-hidden="true"></span><h6 class="food-likes"><%=elem.usersSaved.length%></h6>
+              <span class="glyphicon glyphicon-cutlery icon" aria-hidden="true"></span><h6 class="food-likes"><%=elem.usersDone.length%></h6>
+            </div>
+
+          </div>
+        </div>
+        </a>
+      </div>
+            <%})%>
+    </div>
+  </div>
+    <h3 class="latest-title">SAVED RECIPES</h3>
+    <h4 class="latest-subtitle">CHECK THE MOST YUMMY SAVED RECIPES</h4>
+    <div class="row">
+      <div class="col-sm-12 col-md-10">
+        <%user.recipesSaved.forEach(function(elem){%>
+        <div class="col-sm-6 col-md-4 recipe-div">
+          <a href="recipes/<%=elem._id%>">
+          <div class="thumbnail">
+            <div class="img-container">
+              <img src="<%=elem.imgUrl%>" alt="" class="img-food">
+            </div>
+            <div class="caption">
+              <h4 class="food-title"><%=elem.name%></h4>
+              <h5 class="food-dificulty"><%=elem.preparation.dificulty%> | </h5><h5 class="food-subtitle"> | Calories: <%=elem.nutritionalInfo.calories%></h5>
+              <div class="info-food">
+                <span class="glyphicon glyphicon-thumbs-up icon" aria-hidden="true"></span><h6 class="food-likes"><%=elem.likes%></h6>
+                <span class="glyphicon glyphicon-heart icon" aria-hidden="true"></span><h6 class="food-likes"><%=elem.usersSaved.length%></h6>
+                <span class="glyphicon glyphicon-cutlery icon" aria-hidden="true"></span><h6 class="food-likes"><%=elem.usersDone.length%></h6>
+              </div>
+
+            </div>
+          </div>
+          </a>
+        </div>
+              <%})%>
+      </div>
+</div>
