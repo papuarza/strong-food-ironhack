@@ -2,6 +2,10 @@ a {
   color: #00B7FF;
 }
 
+button:hover{
+  text-decoration: none;
+}
+
 /* public/stylesheets/styles.css */
 .main-container {
   padding-top: 25px;
@@ -19,29 +23,38 @@ a {
 nav.navbar {
   box-shadow: 0px 4px 10px 0 rgba(22,22,22,0.08);
   margin-bottom: 0;
-  height:100px;
-  background-color: #6C7F6C;
+  height:80px;
+  background-color: #fff;
   color: #C3262E;
   font-size: 20px;
 }
 
 .nav > li > a {
-  color: black;
+  color: #C1292E;
+  padding: 0px;
+  margin: 0px;
+}
+
+.nav form button {
+  padding: 0px;
+  margin: 0px;
 }
 
 .nav > li.nav-logo {
-  width: 174px;
+  width: 50px;
   display: block;
   position: absolute;
-  left: 50%;
-  margin-left: -87px;
+}
+
+.nav button {
+  border: 0px;
+  background-color: #fff;
 }
 
 .nav-logo-image {
-  height: 150px;
-  width: 300px;
-  margin-top: -40px;
-  margin-left: -90px;
+  height: 96px;
+  width: 120px;
+  margin-top: -22px;
 }
 
 .nav > .li-logout {
@@ -50,6 +63,11 @@ nav.navbar {
 
 .btn-logout {
   color: black;
+}
+
+.nav-item {
+  margin: 2vh 4vh 2vh 2vh;
+  padding: 0px;
 }
 
 .home-heading {
@@ -173,11 +191,13 @@ nav.navbar {
 }
 
 .main-img-food {
-  background-position: center;
+  background-position: bottom;
   background-size: cover;
   width: 100%;
   height: 60vh;
   margin: 0px;
+  position: relative;
+  text-align: auto;
 }
 
 .background-food-img {
@@ -185,5 +205,291 @@ nav.navbar {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: blur(4px);
+  filter: blur(3px);
+
+}
+
+.recipe-title {
+  text-align: center;
+  background-color: rgba(0,0,0,0.7);
+  padding: 1vh 1vh;
+  position: absolute;
+  width: 60%;
+  top: 10vh;
+  left:0;
+  right: 0;
+  color: #fff;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 50px;
+}
+
+.recipe-subtitle {
+  text-align: left;
+  background-color: rgba(0,0,0,0.7);
+  padding: 1vh 2vh 1vh 5vh;
+  position: absolute;
+  width: 35%;
+  top: 40vh;
+  left:0;
+  right: 0;
+  color: #fff;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 2em;
+}
+
+.recipe-subtitle h2 {
+  color: #fff;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 1em;
+  margin: 0px;
+  display: inline-flex;
+  margin: 0px 35px 0px 0px;
+}
+
+.profile-pic-container {
+  border-radius: 360px;
+  width: 40vh;
+  padding: 1px;
+  border: 1px solid #C16266;
+  margin: 5vh;
+}
+
+.profile-pic {
+  border-radius: 360px;
+  width: 100%;
+}
+
+.username-profile {
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 30px;
+  color: #C16266;
+  margin: 5vh 0px 0px 0px;
+}
+
+.email-profile {
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+  color: #2B2C28;
+  margin: 1vh 0px 0px 0px;
+}
+
+.profile-icon {
+  height: 20px;
+  width: 20px;
+  margin: -10px 0px 0px 0px;
+}
+
+.profile-info-icons {
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 25px;
+  display: inline-flex;
+  font-weight: 100;
+  margin: 3vh 4vh -5px 3vh;
+}
+
+.info-profile{
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 15px;
+  font-weight: 100;
+  display: inline-flex;
+  margin: 1.5vh 0px 0px 0px;
+}
+
+.recipes-look {
+  background-color: #C16266;
+  border: 1px solid #C16266;
+  color: #fff;
+  display: inline-flex;
+  height: auto;
+  padding: 1vh 3vh;
+  border-radius: 4px;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+  margin: 0px 3vh 0px 0px;
+}
+
+.edit-profile {
+  background-color: #fff;
+  color: #2B2C28;
+  display: inline-flex;
+  border: 1px solid #2B2C28;
+  height: auto;
+  padding: 1vh 3vh;
+  border-radius: 4px;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+}
+
+.buttons-row{
+  margin: 5vh 0px 0px 0px;
+}
+
+.latest-title {
+  color: black;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 24px;
+  margin: 60px 0px 0px 0px;
+}
+
+.latest-subtitle {
+  color: #C16266;
+  font-weight: 100;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 13px;
+  padding: 5px 0px 20px 0px;
+  margin: 0px 0px 25px 0px;
+  border-bottom: 0.5px solid #DFDFDF;
+}
+
+.form-signin {
+    max-width: 280px;
+    padding: 15px;
+    margin:100px;
+    margin-top:20px;
+  }
+.panel-default {
+opacity: 0.8;
+/*margin-top:30px;*/
+}
+.input-group-addon
+{
+    background-color: #C16266;
+    border-color: #C16266;
+    color: rgb(255, 255, 255);
+}
+.form-control:focus
+{
+    background-color: #C16266;
+    border-color: #C16266;
+    color: rgb(255, 255, 255);
+}
+
+.panel-primary {
+  border-color: #C16266;
+}
+
+.form-control {
+  /*color: #fff;*/
+}
+
+.btn-primary {
+  background-color: #C16266;
+  border-color: #C16266;
+}
+
+.header-img-profile-container {
+  border-radius: 360px;
+  height: 30px;
+  width: 30px;
+}
+
+.header-img-profile {
+  border-radius: 360px;
+  height: 40px;
+  width: 40px;
+}
+
+.ingredients-list {
+  padding: 20px 200px 20px 100px;
+  font-weight: 300;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 25px;
+  color: #C16266;
+}
+
+.aditional-info {
+  padding: 20px 50px 20px 0px;
+  font-weight: 300;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 20px;
+  color: #C16266;
+}
+
+.nutritional-info{
+  font-weight: 100;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 15px;
+  padding: 0px 0px 0px 0px;
+  color: #2B2C28;
+  display: inline;
+}
+
+.nutritional-title {
+  font-size: 30px;
+  margin: 25px 0px 30px 0px;
+}
+
+.nutritional-info-value {
+  font-weight: 400;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 15px;
+  padding: 0px 0px 0px 0px;
+  color: #2B2C28;
+  display: inline;
+}
+
+.ingredients-list li {
+  list-style-type: none;
+  border-bottom: 1px solid #C5C6C4;
+  font-weight: 100;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 15px;
+  padding: 15px 0px 15px 0px;
+  color: #2B2C28;
+}
+
+.info-food-each {
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 20px;
+  margin: 40px 0px 40px 20px;
+}
+
+.food-likes-each {
+  display: inline-flex;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 20px;
+  margin: 0px 40px 0px 10px;
+  color: #2B2C28;
+  font-weight: 300;
+}
+
+.element-benefit {
+  border: 1px solid #C16266;
+  padding: 0px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.recipe-save {
+  background-color: #C16266;
+  border: 1px solid #C16266;
+  color: #fff;
+  display: inline-flex;
+  height: auto;
+  padding: 4vh 9vh;
+  border-radius: 4px;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+  margin: 3vh 3vh 0px 0px;
+}
+
+.step-by-step-list {
+  padding: 20px 200px 20px 100px;
+  font-weight: 300;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 25px;
+  color: #C16266;
+}
+
+.step-by-step-list li {
+  list-style-type: decimal;
+  font-weight: 100;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 15px;
+  padding: 7px 0px 7px 0px;
+  color: #2B2C28;
 }

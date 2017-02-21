@@ -77,7 +77,11 @@ passport.use('local-signup', new LocalStrategy(
                 const newUser = new User({
                   username,
                   email,
-                  password: hashPass
+                  password: hashPass,
+                  birthday: new Date(),
+                  heigth     : "000cms",
+                  weight     : "00kgs",
+                  genere: "Empty"
                 });
 
                 newUser.save((err) => {

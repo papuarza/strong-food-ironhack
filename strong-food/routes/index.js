@@ -6,11 +6,8 @@ const Recipe = require('../models/recipes');
 
 /* GET home page. */
 router.get('/', (req, res, next) => {
-  Recipe.find({},function(err,arr){
-    if (err) return next(err);
-    res.render('index', {arr});
-
-  });
+  user = req.user;
+    res.render('index', {user});
 });
 
 
