@@ -1,99 +1,102 @@
 <div class="container">
-  <div class="row">
-    <div class="col-sm-0 col-md-2 filters">
-      <h1>FILTERS</h1>
-      <form action="">
-        <div class="checkbox">
-          <h4 class="filter-title">Type</h4>
-          <label>
+    <div class="row">
+        <div class="col-sm-0 col-md-2 filters">
+            <h1>FILTERS</h1>
+            <form action="">
+                <div class="checkbox">
+                    <h4 class="filter-title">Type</h4>
+                    <label>
             <input type="checkbox" value="" name="vegetarian">
             Vegetarian
           </label><br />
-          <label>
+                    <label>
             <input type="checkbox" value="" name="vegan">
             Vegan
           </label><br />
-          <label>
+                    <label>
             <input type="checkbox" value="" name="glutenFree">
             Gluten Free
           </label><br />
-          <label>
+                    <label>
             <input type="checkbox" value="" name="diaryFree">
             Diary Free
           </label><br />
-          <label>
+                    <label>
             <input type="checkbox" value="" name="veryHealthy">
             Very Healthy
           </label><br />
-        </div>
-      <div class="calories-filter">
-        <h4 class="filter-title">Max. Calories</h4>
-        <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14"/>
-      </div>
-      <div class="checkbox">
-        <h4 class="filter-title">Dish Type</h4>
-        <label>
+                </div>
+                <div class="calories-filter">
+                    <h4 class="filter-title">Max. Calories</h4>
+                    <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14" />
+                </div>
+                <div class="checkbox">
+                    <h4 class="filter-title">Dish Type</h4>
+                    <label>
           <input type="checkbox" value="" name="mainCourse">
           Main Course
         </label><br />
-        <label>
+                    <label>
           <input type="checkbox" value="" name="sideDish">
           Side Dish
         </label><br />
-        <label>
+                    <label>
           <input type="checkbox" value="" name="Dessert">
           Dessert
         </label><br />
-        <label>
+                    <label>
           <input type="checkbox" value="" name="Appetizer">
           Appetizer
         </label><br />
-        <label>
+                    <label>
           <input type="checkbox" value="" name="Salad">
           Salad
         </label><br />
-      </div>
-      <div class="checkbox">
-        <h4 class="filter-title">Dificulty</h4>
-        SuperStarterChef", "ChefWannaBe", "MasterChef
-        <label>
+                </div>
+                <div class="checkbox">
+                    <h4 class="filter-title">Dificulty</h4> SuperStarterChef", "ChefWannaBe", "MasterChef
+                    <label>
           <input type="checkbox" value="" name="SuperStarterChef">
           SuperStarterChef
         </label><br />
-        <label>
+                    <label>
           <input type="checkbox" value="" name="ChefWannaBe">
           ChefWannaBe
         </label><br />
-        <label>
+                    <label>
           <input type="checkbox" value="" name="MasterChef">
           MasterChef
         </label><br />
-      </div>
-      </form>
-    </div>
-    <div class="col-sm-12 col-md-10">
-      <%recipes.forEach(function(elem){%>
-      <div class="col-sm-6 col-md-4 recipe-div">
-        <a href="recipes/<%=elem._id%>">
-        <div class="thumbnail">
-          <div class="img-container">
-            <img src="<%=elem.imgUrl%>" alt="" class="img-food">
-          </div>
-          <div class="caption">
-            <h4 class="food-title"><%=elem.name%></h4>
-            <h5 class="food-dificulty"><%=elem.preparation.dificulty%> | </h5><h5 class="food-subtitle"> | Calories: <%=elem.nutritionalInfo.calories%></h5>
-            <div class="info-food">
-              <span class="glyphicon glyphicon-thumbs-up icon" aria-hidden="true"></span><h6 class="food-likes"><%=elem.likes%></h6>
-              <span class="glyphicon glyphicon-heart icon" aria-hidden="true"></span><h6 class="food-likes"><%=elem.usersSaved.length%></h6>
-              <span class="glyphicon glyphicon-cutlery icon" aria-hidden="true"></span><h6 class="food-likes"><%=elem.usersDone.length%></h6>
-            </div>
-
-          </div>
+                </div>
+            </form>
         </div>
-        </a>
-      </div>
-            <%})%>
-    </div>
+        <div class="col-sm-12 col-md-10">
+            <%recipes.forEach(function(elem){%>
+                <div class="col-sm-6 col-md-4 recipe-div">
+                    <a href="recipes/<%=elem._id%>">
+                        <div class="thumbnail">
+                            <div class="img-container">
+                                <img src="<%=elem.imgUrl%>" alt="" class="img-food">
+                            </div>
+                            <div class="caption">
+                                <h4 class="food-title"><%=elem.name%></h4>
+                                <h5 class="food-dificulty"><%=elem.preparation.dificulty%> | </h5>
+                                <h5 class="food-subtitle"> | Calories: <%=elem.nutritionalInfo.calories%></h5>
+                                <div class="info-food">
+                                    <span class="glyphicon glyphicon-thumbs-up icon" aria-hidden="true"></span>
+                                    <h6 class="food-likes"><%=elem.likes%></h6>
+                                    <span class="glyphicon glyphicon-heart icon" aria-hidden="true"></span>
+                                    <h6 class="food-likes"><%=elem.usersSaved.length%></h6>
+                                    <span class="glyphicon glyphicon-cutlery icon" aria-hidden="true"></span>
+                                    <h6 class="food-likes"><%=elem.usersDone.length%></h6>
+                                </div>
 
-  </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <%})%>
+        </div>
+
+    </div>
 </div>

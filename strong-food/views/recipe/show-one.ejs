@@ -1,67 +1,83 @@
 <%console.log(recipe)%>
-<div class="container-fluid">
-  <div class="row main-img-food">
-    <img src="<%=recipe.imgUrl%>" alt="" class="background-food-img">
-    <h1 class="recipe-title"><%=recipe.name%></h1>
-    <div class="recipe-subtitle">
-      <span class="glyphicon glyphicon-time icon" aria-hidden="true"></span>
-      <h2><%=recipe.preparation.timeForPreparaion%>'</h2>
-      <span class="glyphicon glyphicon-flash icon" aria-hidden="true"></span>
-      <h2><%=recipe.preparation.dificulty%></h2>
-    </div>
+    <div class="container-fluid">
+        <div class="row main-img-food">
+            <img src="<%=recipe.imgUrl%>" alt="" class="background-food-img">
+            <h1 class="recipe-title"><%=recipe.name%></h1>
+            <div class="recipe-subtitle">
+                <span class="glyphicon glyphicon-time icon" aria-hidden="true"></span>
+                <h2><%=recipe.preparation.timeForPreparaion%>'</h2>
+                <span class="glyphicon glyphicon-flash icon" aria-hidden="true"></span>
+                <h2><%=recipe.preparation.dificulty%></h2>
+            </div>
 
-  </div>
-  <div class="row">
-    <div class="col-sm-12 col-md-6 ingredients-list">
-      <h2>Ingredients</h2>
-      <ul>
-      <%recipe.ingredients.forEach(function(elem){%>
-        <li><%=elem%></li>
-      <%})%>
-      </ul>
-    </div>
-    <div class="col-sm-12 col-md-6 aditional-info">
-      <h3 class="nutritional-title">Nutritional Info</h3>
-        <p class="nutritional-info">Calories:</p> <p class="nutritional-info-value"><%=recipe.nutritionalInfo.calories%>kcal&nbsp;&nbsp;&nbsp;|</p>
-        <p class="nutritional-info">&nbsp;&nbsp;&nbsp;Proteins:</p> <p class="nutritional-info-value"><%=recipe.nutritionalInfo.protein%>&nbsp;&nbsp;&nbsp;|</p>
-        <p class="nutritional-info">&nbsp;&nbsp;&nbsp;Fat:</p> <p class="nutritional-info-value"><%=recipe.nutritionalInfo.fat%>&nbsp;&nbsp;&nbsp;|</p>
-        <p class="nutritional-info">&nbsp;&nbsp;&nbsp;Carbs:</p><p class="nutritional-info-value"><%=recipe.nutritionalInfo.carbs%></p>
-        <div class="info-food-each">
-          <span class="glyphicon glyphicon-thumbs-up icon" aria-hidden="true"></span><h6 class="food-likes-each"><%=recipe.likes%></h6>
-          <span class="glyphicon glyphicon-heart icon" aria-hidden="true"></span><h6 class="food-likes-each"><%=recipe.usersSaved.length%></h6>
-          <span class="glyphicon glyphicon-cutlery icon" aria-hidden="true"></span><h6 class="food-likes-each"><%=recipe.usersDone.length%></h6>
         </div>
-        <div class="classify-elements">
-          <%if(recipe.vegetarian){%>
-            <span class="element-benefit">Vegetarian</span>
-          <%}%>
-          <%if(recipe.vegan){%>
-            <span class="element-benefit">Vegan</span>
-          <%}%>
-          <%if(recipe.glutenFree){%>
-            <span class="element-benefit">Gluten Free</span>
-          <%}%>
-          <%if(recipe.diaryFree){%>
-            <span class="element-benefit">Diary Free</span>
-          <%}%>
-          <%if(recipe.veryHealthy){%>
-            <span class="element-benefit">Very Healthy</span>
-          <%}%>
+        <div class="row">
+            <div class="col-sm-12 col-md-6 ingredients-list">
+                <h2>Ingredients</h2>
+                <ul>
+                    <%recipe.ingredients.forEach(function(elem){%>
+                        <li>
+                            <%=elem%>
+                        </li>
+                        <%})%>
+                </ul>
+            </div>
+            <div class="col-sm-12 col-md-6 aditional-info">
+                <h3 class="nutritional-title">Nutritional Info</h3>
+                <p class="nutritional-info">Calories:</p>
+                <p class="nutritional-info-value">
+                    <%=recipe.nutritionalInfo.calories%>kcal&nbsp;&nbsp;&nbsp;|</p>
+                <p class="nutritional-info">&nbsp;&nbsp;&nbsp;Proteins:</p>
+                <p class="nutritional-info-value">
+                    <%=recipe.nutritionalInfo.protein%>&nbsp;&nbsp;&nbsp;|</p>
+                <p class="nutritional-info">&nbsp;&nbsp;&nbsp;Fat:</p>
+                <p class="nutritional-info-value">
+                    <%=recipe.nutritionalInfo.fat%>&nbsp;&nbsp;&nbsp;|</p>
+                <p class="nutritional-info">&nbsp;&nbsp;&nbsp;Carbs:</p>
+                <p class="nutritional-info-value">
+                    <%=recipe.nutritionalInfo.carbs%>
+                </p>
+                <div class="info-food-each">
+                    <span class="glyphicon glyphicon-thumbs-up icon" aria-hidden="true"></span>
+                    <h6 class="food-likes-each"><%=recipe.likes%></h6>
+                    <span class="glyphicon glyphicon-heart icon" aria-hidden="true"></span>
+                    <h6 class="food-likes-each"><%=recipe.usersSaved.length%></h6>
+                    <span class="glyphicon glyphicon-cutlery icon" aria-hidden="true"></span>
+                    <h6 class="food-likes-each"><%=recipe.usersDone.length%></h6>
+                </div>
+                <div class="classify-elements">
+                    <%if(recipe.vegetarian){%>
+                        <span class="element-benefit">Vegetarian</span>
+                        <%}%>
+                            <%if(recipe.vegan){%>
+                                <span class="element-benefit">Vegan</span>
+                                <%}%>
+                                    <%if(recipe.glutenFree){%>
+                                        <span class="element-benefit">Gluten Free</span>
+                                        <%}%>
+                                            <%if(recipe.diaryFree){%>
+                                                <span class="element-benefit">Diary Free</span>
+                                                <%}%>
+                                                    <%if(recipe.veryHealthy){%>
+                                                        <span class="element-benefit">Very Healthy</span>
+                                                        <%}%>
+                </div>
+                <div class="buttons-row">
+                    <a href="/show-recipes"><button class="recipe-save">SAVE RECIPE</button></a>
+                </div>
+            </div>
         </div>
-        <div class="buttons-row">
-          <a href="/show-recipes"><button class="recipe-save">SAVE RECIPE</button></a>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 step-by-step-list">
+                <h2>Instructions</h2>
+                <ul>
+                    <%recipe.preparation.StepByStep.forEach(function(elem){%>
+                        <li>
+                            <%=elem%>
+                        </li>
+                        <%})%>
+                </ul>
+            </div>
         </div>
     </div>
     </div>
-    <div class="row">
-      <div class="col-sm-12 col-md-12 step-by-step-list">
-        <h2>Instructions</h2>
-        <ul>
-        <%recipe.preparation.StepByStep.forEach(function(elem){%>
-          <li><%=elem%></li>
-        <%})%>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>

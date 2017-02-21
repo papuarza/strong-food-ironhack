@@ -1,7 +1,11 @@
+/*jshint esversion: 6*/
 const express = require('express');
-const router  = express.Router();
+const router = express.Router();
 const passport = require('passport');
-const { ensureLoggedIn, ensureLoggedOut } = require('connect-ensure-login');
+const {
+    ensureLoggedIn,
+    ensureLoggedOut
+} = require('connect-ensure-login');
 const Recipe = require('../models/recipes')
 
 router.get('/create', ensureLoggedOut(), (req, res) => {
@@ -13,32 +17,38 @@ router.get('/get-recipes', (req, res) => {
 });
 
 router.post('/get-recipes', (req, res) => {
-  const body = req.body.recipes;
-  body.forEach(function(elem){
-    const recipe = new Recipe(elem)
-    recipe.save(function (err, doc) {
-      if (err) return next(err);
-      console.log("guardado");
+    const body = req.body.recipes;
+    body.forEach(function(elem) {
+        const recipe = new Recipe(elem)
+        recipe.save(function(err, doc) {
+            if (err) return next(err);
+            console.log("guardado");
+        });
     });
-  });
 });
 
 router.get('/show-recipes', (req, res) => {
-  Recipe.find({}, function(err, recipes){
-      if (err) return next (err);
-      // console.log(recipes)
-        res.render('recipe/show', {recipes});
+    Recipe.find({}, function(err, recipes) {
+        if (err) return next(err);
+        // console.log(recipes)
+        res.render('recipe/show', {
+            recipes
+        });
     });
 });
 
 router.get('/recipes/:id', (req, res) => {
-  const id = req.params.id
-  console.log(id)
-  Recipe.findOne({_id: id}, function (err, recipe) {
-    console.log(recipe)
-    if (err) return next(err)
-    res.render('recipe/show-one', {recipe})
-  })
+    const id = req.params.id
+    console.log(id)
+    Recipe.findOne({
+        _id: id
+    }, function(err, recipe) {
+        console.log(recipe)
+        if (err) return next(err)
+        res.render('recipe/show-one', {
+            recipe
+        })
+    })
 });
 
 
