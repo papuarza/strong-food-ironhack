@@ -37,16 +37,17 @@ router.get('/show-recipes', (req, res) => {
     });
 });
 
-router.get('/save-recipe', (req, res) => {
-
+router.post('/save-recipe', (req, res) => {
+  const recipeId = req.body._id;
+  const userId = req.signedCookies._id
 });
+
+
 router.get('/recipes/:id', (req, res) => {
     const id = req.params.id;
-    console.log(id);
     Recipe.findOne({
         _id: id
     }, function(err, recipe) {
-        console.log(recipe);
         if (err) return next(err);
         res.render('recipe/show-one', {
             recipe

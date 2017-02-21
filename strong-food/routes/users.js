@@ -13,8 +13,6 @@ router.get('/login', ensureLoggedOut(), (req, res) => {
 });
 
 router.post('/login', ensureLoggedOut(), passport.authenticate('local-login'), function(req, res) {
-    // If this function gets called, authentication was successful.
-    // `req.user` contains the authenticated user.
     res.redirect('/profile');
 });
 

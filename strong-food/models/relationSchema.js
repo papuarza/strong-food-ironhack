@@ -3,13 +3,11 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const RelationSchema = new Schema({
-    userId: String,
-    recipeId: String,
-    _userId: {
+    user: {
         type: Schema.Types.ObjectId,
         ref: 'User'
     },
-    _recipeId: {
+    recipe: {
         type: Schema.Types.ObjectId,
         ref: 'Recipe'
     },
