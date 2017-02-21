@@ -3,6 +3,7 @@
         <div class="row main-img-food">
             <img src="<%=recipe.imgUrl%>" alt="" class="background-food-img">
             <h1 class="recipe-title"><%=recipe.name%></h1>
+            <input id="recipe-id" value="<%=recipe._id%>" hidden="true"></input>
             <div class="recipe-subtitle">
                 <span class="glyphicon glyphicon-time icon" aria-hidden="true"></span>
                 <h2><%=recipe.preparation.timeForPreparaion%>'</h2>
@@ -63,9 +64,8 @@
                                                         <%}%>
                 </div>
                 <div class="buttons-row">
-                  <form class="" action="/save-recipe" method="post">
-                    <a href="/show-recipes"><button class="recipe-save">SAVE RECIPE</button></a>
-                  </form>
+
+                    <a href="/show-recipes"><button class="recipe-save" id="save-the-recipe" type="submit">SAVE RECIPE</button></a>
                 </div>
             </div>
         </div>
