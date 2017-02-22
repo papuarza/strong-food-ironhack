@@ -3,6 +3,7 @@ const router  = express.Router();
 const passport = require('passport');
 const { ensureLoggedIn, ensureLoggedOut } = require('connect-ensure-login');
 const Recipe = require('../models/recipes')
+const Relation = require('../models/relationSchema');
 
 router.get('/create', ensureLoggedOut(), (req, res) => {
     res.render('recipe/create');
@@ -28,6 +29,22 @@ router.get('/show-recipes', ensureLoggedIn(),  (req, res) => {
       if (err) return next (err);
       // console.log(recipes)
         res.render('recipe/show', {recipes});
+    });
+});
+
+router.post('/save-recipe', (req, res) => {
+    const recipe = req.body.recipeId;
+    const user = req.user._id;
+    const cooked = false;
+    const elem = {
+        user,
+        recipe,
+        cooked
+    };
+    const relation = new Relation(elem);
+    relation.save(function(err, doc) {
+        if (err) return next(err);
+        console.log("guardado");
     });
 });
 

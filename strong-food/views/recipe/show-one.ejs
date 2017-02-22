@@ -6,6 +6,7 @@
     <div class="recipe-subtitle">
       <span class="glyphicon glyphicon-time icon" aria-hidden="true"></span>
       <h2><%=recipe.preparation.timeForPreparaion%>'</h2>
+      <input id="recipe-id" value="<%=recipe._id%>" hidden="true"></input>
       <span class="glyphicon glyphicon-flash icon" aria-hidden="true"></span>
       <h2><%=recipe.preparation.dificulty%></h2>
     </div>
@@ -49,8 +50,9 @@
           <%}%>
         </div>
         <div class="buttons-row">
-          <a href="/show-recipes"><button class="recipe-save">SAVE RECIPE</button></a>
-        </div>
+
+                    <a href="/show-recipes"><button class="recipe-save" id="save-the-recipe" type="submit">SAVE RECIPE</button></a>
+                </div>
     </div>
     </div>
     <div class="row">

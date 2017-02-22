@@ -6,6 +6,37 @@ button:hover{
   text-decoration: none;
 }
 
+.upload-profile-pic {
+  margin: 0px 0px 0px 22%;
+  /*text-align: ;*/
+}
+
+.upload-pic {
+  border: 1px solid #C16266;
+  background-color: #fff;
+  border-radius: 3px;
+  font-size: 15px;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  display: block;
+  font-weight: 100;
+  padding: 0px 10px;
+  width: 150px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.upload-pic-button {
+  border: 1px solid #C16266;
+  background-color: #C16266;
+  color: #fff;
+  border-radius: 3px;
+  font-size: 15px;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  display: block;
+  font-weight: 300;
+  padding: 0px 10px;
+  width: 150px;
+}
 
 .header-form {
   background-color: #C16266;
@@ -25,7 +56,6 @@ button:hover{
   font-weight: 100;
   margin: 3vh 3vh 0px 0px;
 }
-
 
 /* public/stylesheets/styles.css */
 .main-container {
@@ -54,7 +84,6 @@ button:hover{
 nav.navbar {
   box-shadow: 0px 4px 10px 0 rgba(22,22,22,0.08);
   margin-bottom: 0;
-<<<<<<< HEAD
   height:40px;
   background-color: #C16266;
   color: #fff;
@@ -80,40 +109,6 @@ a:visited {
   width: 45px;
   height: 45px;
   border-radius: 360px;
-
-  height:80px;
-  background-color: #fff;
-  color: #C3262E;
-  font-size: 20px;
-}
-
-.nav > li > a {
-  color: #C1292E;
-  padding: 0px;
-  margin: 0px;
-}
-
-.nav form button {
-  padding: 0px;
-  margin: 0px;
-}
-
-.nav > li.nav-logo {
-  width: 50px;
-  display: block;
-  position: absolute;
-}
-
-.nav button {
-  border: 0px;
-  background-color: #fff;
-}
-
-.nav-logo-image {
-  height: 96px;
-  width: 120px;
-  margin-top: -22px;
-
 }
 
 .right-nav {
@@ -129,7 +124,6 @@ a:visited {
   padding: 20px 20px 0px 20px;
 }
 
-
 .nav-item-profilepic {
   margin: -10px 0px 0px 0px;
   padding: 0px;
@@ -138,13 +132,6 @@ a:visited {
   font-weight: 100;
   padding: 10px 20px 0px 5px;
 }
-
-.nav-item {
-  margin: 2vh 4vh 2vh 2vh;
-  padding: 0px;
-}
-
-
 .home-heading {
   height: 80vh;
   padding: 0 30%;
@@ -461,20 +448,6 @@ a:visited {
   margin: 0px 35px 0px 0px;
 }
 
-
-#upload-photo {
-   opacity: 0;
-   position: absolute;
-   z-index: -1;
-}
-
-.profile-pic-container {
-  border-radius: 360px;
-  width: 35vh;
-  padding: 1px;
-  border: 1px solid #C16266;
-  margin: 8vh 5vh 5vh 1vh;
-
 .profile-pic-container {
   border-radius: 360px;
   width: 40vh;
@@ -552,6 +525,25 @@ a:visited {
   font-weight: 100;
 }
 
+.saved-recipes{
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.cooked-button {
+  background-color: #C16266;
+  color: #fff;
+  display: inline-flex;
+  border: 1px solid #C16266;
+  height: auto;
+  padding: 0.5vh 1.5vh;
+  border-radius: 4px;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+  margin: 0px 0px 20px 32%;
+}
+
 .buttons-row{
   margin: 5vh 0px 0px 0px;
 }
@@ -604,7 +596,6 @@ opacity: 0.8;
   /*color: #fff;*/
 }
 
-
 .btn-facebook {
   background-color: #3B5998;
   color: #fff;
@@ -616,12 +607,10 @@ opacity: 0.8;
   margin: 0px 5px 0px 0px;
 }
 
-
 .btn-primary {
   background-color: #C16266;
   border-color: #C16266;
 }
-
 
 .sign-in {
   margin: 50px 0px;
@@ -631,23 +620,12 @@ opacity: 0.8;
   border-radius: 360px;
   height: 25px;
   width: 25px;
-
-.header-img-profile-container {
-  border-radius: 360px;
-  height: 30px;
-  width: 30px;
-
 }
 
 .header-img-profile {
   border-radius: 360px;
-
   height: 30px;
   width: 30px;
-
-  height: 40px;
-  width: 40px;
-
 }
 
 .ingredients-list {
@@ -743,6 +721,12 @@ opacity: 0.8;
   color: #C16266;
 }
 
+#upload-photo {
+   opacity: 0;
+   position: absolute;
+   z-index: -1;
+}
+
 .step-by-step-list li {
   list-style-type: decimal;
   font-weight: 100;
@@ -750,7 +734,6 @@ opacity: 0.8;
   font-size: 15px;
   padding: 7px 0px 7px 0px;
   color: #2B2C28;
-
 }
 
 .show-all-recipes{
@@ -759,5 +742,4 @@ opacity: 0.8;
 
 .list-all-recipes {
   margin: 0px 0px 0px 0vh;
-
 }
