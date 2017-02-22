@@ -28,6 +28,7 @@ router.post('/get-recipes', (req, res) => {
     });
 });
 
+
 router.get('/show-recipes', (req, res) => {
     Recipe.find({}, function(err, recipes) {
         if (err) return next(err);

@@ -1,494 +1,763 @@
 a {
-    color: #00B7FF;
+  color: #00B7FF;
 }
 
-button:hover {
-    text-decoration: none;
+button:hover{
+  text-decoration: none;
 }
 
+
+.header-form {
+  background-color: #C16266;
+  border: 0px;
+}
+
+.main-btn {
+  background-color: #C16266;
+  border: 1px solid #C16266;
+  color: #fff;
+  display: inline-flex;
+  height: auto;
+  padding: 3vh 9vh;
+  border-radius: 4px;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+  margin: 3vh 3vh 0px 0px;
+}
+
+
+/* public/stylesheets/styles.css */
 .main-container {
-    padding-top: 25px;
+  padding-top: 0px;
+}
+
+.main-title {
+  font-size: 50px;
 }
 
 .container {
-    margin-right: 0px;
-    margin-left: 10px;
+  margin-right: 0px;
+  margin-left: 10px;
 }
 
 .container-fluid {
-    padding: 0px;
+  padding: 0px;
+}
+
+.header-img{
+  background-image: url('../img/bg.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 nav.navbar {
-    box-shadow: 0px 4px 10px 0 rgba(22, 22, 22, 0.08);
-    margin-bottom: 0;
-    height: 80px;
-    background-color: #fff;
-    color: #C3262E;
-    font-size: 20px;
+  box-shadow: 0px 4px 10px 0 rgba(22,22,22,0.08);
+  margin-bottom: 0;
+<<<<<<< HEAD
+  height:40px;
+  background-color: #C16266;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 0px;
 }
 
-.nav>li>a {
-    color: #C1292E;
-    padding: 0px;
-    margin: 0px;
-}
-
-.nav form button {
-    padding: 0px;
-    margin: 0px;
-}
-
-.nav>li.nav-logo {
-    width: 50px;
-    display: block;
-    position: absolute;
-}
-
-.nav button {
-    border: 0px;
-    background-color: #fff;
+a:visited {
+    color: #fff;
 }
 
 .nav-logo-image {
-    height: 96px;
-    width: 120px;
-    margin-top: -22px;
+  height: 40px;
+  position: relative;
+  width: 40px;
+  background-color: #fff;
+  border-radius: 360px;
+  margin: 5px 0px 0px 50px;
 }
 
-.nav>.li-logout {
-    padding: 7px;
+.nav-logo-container {
+  background-color: #fff;
+  width: 45px;
+  height: 45px;
+  border-radius: 360px;
+
+  height:80px;
+  background-color: #fff;
+  color: #C3262E;
+  font-size: 20px;
 }
 
-.btn-logout {
-    color: black;
+.nav > li > a {
+  color: #C1292E;
+  padding: 0px;
+  margin: 0px;
+}
+
+.nav form button {
+  padding: 0px;
+  margin: 0px;
+}
+
+.nav > li.nav-logo {
+  width: 50px;
+  display: block;
+  position: absolute;
+}
+
+.nav button {
+  border: 0px;
+  background-color: #fff;
+}
+
+.nav-logo-image {
+  height: 96px;
+  width: 120px;
+  margin-top: -22px;
+
+}
+
+.right-nav {
+  text-align: right;
 }
 
 .nav-item {
-    margin: 2vh 4vh 2vh 2vh;
-    padding: 0px;
+  margin: -10px 0px 0px 0px;
+  padding: 0px;
+  color: #fff;
+  display: inline-flex;
+  font-weight: 100;
+  padding: 20px 20px 0px 20px;
 }
 
+
+.nav-item-profilepic {
+  margin: -10px 0px 0px 0px;
+  padding: 0px;
+  color: #fff;
+  display: inline-flex;
+  font-weight: 100;
+  padding: 10px 20px 0px 5px;
+}
+
+.nav-item {
+  margin: 2vh 4vh 2vh 2vh;
+  padding: 0px;
+}
+
+
 .home-heading {
-    background-color: #E3ECFA;
-    height: 75vh;
-    padding: 0 30%;
-    position: relative;
+  height: 80vh;
+  padding: 0 30%;
+  position: relative;
 }
 
 .home-heading-wrapper {
-    padding: 0 5%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  padding: 0 5%;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.thumbnail {
-    border: 0px;
+.about-row {
+  background-color: #fff;
+  padding: 50px 20px 50px 20px;
+  text-align: center;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
 }
 
-.home-heading-wrapper>h1 {
-    font-size: 9rem;
+.circle-container {
+  background-color: #C16266;
+  border-radius: 360px;
+  padding: 10px 10px 10px 10px;
+  margin: 0px 0px 0px 45%;
+  width: 50px;
+  height: 50px;
 }
 
-.home-heading-wrapper>p {
-    font-size: 2rem;
+.icon-home {
+  color: #FFF;
+  font-size: 25px;
+  margin: 3px 0px 0px 0px;
 }
 
-.img-responsive {
-    text-align: center;
-    height: 30vh;
-    width: 100%;
+.product-title{
+    font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+    border-bottom: 2px solid #C16266;
+    width: 70%;
+    padding: 0px 0px 10px 0px;
+    box-sizing: border-box;
+    margin: 20px 0px 20px 15%;
 }
 
-.sub-footer {
-    background-color: #2B2C28;
-    height: 30vh;
-    padding: 0 30%;
-    position: relative;
+.product-descr {
+  padding: 0px 40px;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 17px;
 }
 
-.footer {
-    background-color: #393A35;
-    height: 22vh;
-    padding: 0 30%;
-    position: relative;
-}
-
-.informationandabaout {
-    height: 60vh;
-    width: 100%;
-    background-color: #C3262E;
-    text-align: center;
-}
-
-.food-title {
-    font-weight: 700;
-    margin: 2vh 0px 0px 0px;
-    color: #484848;
-    font-size: 12px;
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-}
-
-.food-subtitle {
-    font-weight: 100;
-    margin: 1vh 0px 0px 0px;
-    display: inline-flex;
-    color: #484848;
-    font-size: 13px;
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-}
-
-.food-dificulty {
-    font-weight: 300;
-    margin: 1vh 0px 0px 0px;
-    color: #C1292E;
-    display: inline-flex;
-    font-size: 13px;
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-}
-
-.img-container {
-    background-position: center;
-    background-size: cover;
-    height: 40vh;
-    width: 100%;
-}
-
-.img-food {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.food-likes {
-    display: inline-flex;
-    padding: 0px 7vh 0px 3px;
-}
-
-.thumbnail .caption {
+#container-img-home {
+    background: #DDD;
+    max-width: 100%;
+    border:0px;
     padding: 0px;
     margin: 0px;
 }
 
+.img-container-home{
+  border:0px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.last-row-title {
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 60px;
+}
+
+.last-row-subtitle {
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 35px;
+  font-weight: 100;
+}
+
+.last-row-wrapper{
+  padding: 0px 100px;
+  text-align: center;
+  margin: 50px 0px 0px 0px;
+
+}
+
+.last-about-row {
+  height: 400px;
+}
+
+.img-gallery-home{
+  height: auto;
+  width: 100%;
+  margin: 0px;
+  border: 0px;
+  padding:0px;
+}
+
+.item {
+    width: 200px;
+    float: left;
+}
+.item img {
+    display: block;
+    width: 100%;
+}
+
+.thumbnail {
+  border: 0px;
+}
+
+.home-heading-wrapper > h1 {
+  font-size: 7rem;
+}
+
+.home-heading-wrapper > p {
+  font-size: 2rem;
+}
+
+.img-responsive {
+  text-align: center;
+  height: 30vh;
+  width: 100%;
+}
+.sub-footer {
+  background-color: #2B2C28;
+  height: 30vh;
+  padding: 0px;
+  position: relative;
+  color: #fff;
+}
+
+.main-footer {
+  background-color: #393A35 ;
+  padding: 0 5%;
+  position: relative;
+}
+
+.rrss-logo {
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  margin: 15% 2%;
+}
+
+.social-col {
+  padding: 50px 0px 0px 30px;
+}
+
+.footer-title-first-col {
+  color: #C5C6C4;
+  font-size: 18px;
+  border-bottom: 1px dotted #C5C6C4;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  padding: 20px 30px 20px 0px;
+  margin: 0px 20px 20px 0px;
+}
+
+.sub-footer {
+  height: 40px;
+  color: #DFE0DE;
+  font-size: 10px;
+  padding: 10px 30px;
+}
+
+.sitemap-list {
+  color: #fff;
+  font-size: 14px;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  list-style-type: none;
+  margin: 0px 0px 10px 0px;
+  padding: 0px;
+}
+
+.sitemap-list li {
+  padding: 5px 0px 5px 0px;
+}
+
+.sitemap {
+  margin: 0px;
+}
+
+.footer-text-first-col{
+  color: #fff;
+  font-size: 14px;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  padding: 0px 30px 20px 0px;
+}
+
+.informationandabaout {
+  height: 60vh;
+  width: 100%;
+  background-color: #C3262E;
+  text-align: center;
+}
+
+.food-title {
+  font-weight: 700;
+  margin: 2vh 0px 0px 0px;
+  color: #484848;
+
+  font-size: 12px;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+}
+
+.food-subtitle {
+  font-weight: 100;
+  margin: 1vh 0px 0px 0px;
+  display: inline-flex;
+  color: #484848;
+  font-size: 13px;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+}
+
+.food-dificulty {
+  font-weight: 300;
+  margin: 1vh 0px 0px 0px;
+  color: #C1292E;
+  display: inline-flex;
+  font-size: 13px;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+}
+
+.img-container {
+  background-position: center;
+  background-size: cover;
+  height: 40vh;
+  width: 100%;
+}
+
+.img-food {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.food-likes {
+  display: inline-flex;
+  padding: 0px 7vh 0px 3px;
+}
+
+.thumbnail .caption {
+  padding: 0px;
+  margin: 0px;
+}
+
 .icon {
-    display: inline-flex;
+  display: inline-flex;
 }
 
 .recipe-div {
-    height: 380px;
+  height: 57vh;
 }
 
 .filters {
-    border-right: : 1px solid #C16266;
+  border-right: : 1px solid #C16266;
 }
 
 #ex1Slider .slider-selection {
-    background: #BABABA;
+	background: #BABABA;
 }
 
 .main-img-food {
-    background-position: bottom;
-    background-size: cover;
-    width: 100%;
-    height: 60vh;
-    margin: 0px;
-    position: relative;
-    text-align: auto;
+  background-position: bottom;
+  background-size: cover;
+  width: 100%;
+  height: 60vh;
+  margin: 0px;
+  position: relative;
+  text-align: auto;
 }
 
 .background-food-img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: blur(3px);
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(3px);
+
 }
 
 .recipe-title {
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 1vh 1vh;
-    position: absolute;
-    width: 60%;
-    top: 10vh;
-    left: 0;
-    right: 0;
-    color: #fff;
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-    font-size: 50px;
+  text-align: center;
+  background-color: rgba(0,0,0,0.7);
+  padding: 1vh 1vh;
+  position: absolute;
+  width: 60%;
+  top: 10vh;
+  left:0;
+  right: 0;
+  color: #fff;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 50px;
 }
 
 .recipe-subtitle {
-    text-align: left;
-    background-color: rgba(0, 0, 0, 0.7);
-    padding: 1vh 2vh 1vh 5vh;
-    position: absolute;
-    width: 35%;
-    top: 40vh;
-    left: 0;
-    right: 0;
-    color: #fff;
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-    font-size: 2em;
+  text-align: left;
+  background-color: rgba(0,0,0,0.7);
+  padding: 1vh 2vh 1vh 5vh;
+  position: absolute;
+  width: 35%;
+  top: 40vh;
+  left:0;
+  right: 0;
+  color: #fff;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 2em;
 }
 
 .recipe-subtitle h2 {
-    color: #fff;
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-    font-size: 1em;
-    margin: 0px;
-    display: inline-flex;
-    margin: 0px 35px 0px 0px;
+  color: #fff;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 1em;
+  margin: 0px;
+  display: inline-flex;
+  margin: 0px 35px 0px 0px;
+}
+
+
+#upload-photo {
+   opacity: 0;
+   position: absolute;
+   z-index: -1;
 }
 
 .profile-pic-container {
-    border-radius: 360px;
-    width: 40vh;
-    padding: 1px;
-    border: 1px solid #C16266;
-    margin: 5vh;
+  border-radius: 360px;
+  width: 35vh;
+  padding: 1px;
+  border: 1px solid #C16266;
+  margin: 8vh 5vh 5vh 1vh;
+
+.profile-pic-container {
+  border-radius: 360px;
+  width: 40vh;
+  padding: 1px;
+  border: 1px solid #C16266;
+  margin: 5vh;
 }
 
 .profile-pic {
-    border-radius: 360px;
-    width: 100%;
+  border-radius: 360px;
+  width: 100%;
 }
 
 .username-profile {
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-    font-size: 30px;
-    color: #C16266;
-    margin: 5vh 0px 0px 0px;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 30px;
+  color: #C16266;
+  margin: 5vh 0px 0px 0px;
 }
 
 .email-profile {
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-    font-size: 20px;
-    font-weight: 100;
-    color: #2B2C28;
-    margin: 1vh 0px 0px 0px;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+  color: #2B2C28;
+  margin: 1vh 0px 0px 0px;
 }
 
 .profile-icon {
-    height: 20px;
-    width: 20px;
-    margin: -10px 0px 0px 0px;
+  height: 20px;
+  width: 20px;
+  margin: -10px 0px 0px 0px;
 }
 
 .profile-info-icons {
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-    font-size: 25px;
-    display: inline-flex;
-    font-weight: 100;
-    margin: 3vh 4vh -5px 3vh;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 25px;
+  display: inline-flex;
+  font-weight: 100;
+  margin: 3vh 4vh -5px 3vh;
 }
 
-.info-profile {
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-    font-size: 15px;
-    font-weight: 100;
-    display: inline-flex;
-    margin: 1.5vh 0px 0px 0px;
+.info-profile{
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 15px;
+  font-weight: 100;
+  display: inline-flex;
+  margin: 1.5vh 0px 0px 0px;
 }
 
 .recipes-look {
-    background-color: #C16266;
-    border: 1px solid #C16266;
-    color: #fff;
-    display: inline-flex;
-    height: auto;
-    padding: 1vh 3vh;
-    border-radius: 4px;
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-    font-size: 20px;
-    font-weight: 100;
-    margin: 0px 3vh 0px 0px;
+  background-color: #C16266;
+  border: 1px solid #C16266;
+  color: #fff;
+  display: inline-flex;
+  height: auto;
+  padding: 1vh 3vh;
+  border-radius: 4px;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+  margin: 0px 3vh 0px 0px;
 }
 
 .edit-profile {
-    background-color: #fff;
-    color: #2B2C28;
-    display: inline-flex;
-    border: 1px solid #2B2C28;
-    height: auto;
-    padding: 1vh 3vh;
-    border-radius: 4px;
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-    font-size: 20px;
-    font-weight: 100;
+  background-color: #fff;
+  color: #2B2C28;
+  display: inline-flex;
+  border: 1px solid #2B2C28;
+  height: auto;
+  padding: 1vh 3vh;
+  border-radius: 4px;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 20px;
+  font-weight: 100;
 }
 
-.buttons-row {
-    margin: 5vh 0px 0px 0px;
+.buttons-row{
+  margin: 5vh 0px 0px 0px;
 }
 
 .latest-title {
-    color: black;
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-    font-size: 24px;
-    margin: 60px 0px 0px 0px;
+  color: black;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 24px;
+  margin: 60px 0px 0px 0px;
 }
 
 .latest-subtitle {
-    color: #C16266;
-    font-weight: 100;
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-    font-size: 13px;
-    padding: 5px 0px 20px 0px;
-    margin: 0px 0px 25px 0px;
-    border-bottom: 0.5px solid #DFDFDF;
+  color: #C16266;
+  font-weight: 100;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 13px;
+  padding: 5px 0px 20px 0px;
+  margin: 0px 0px 25px 0px;
+  border-bottom: 0.5px solid #DFDFDF;
 }
 
 .form-signin {
     max-width: 280px;
     padding: 15px;
-    margin: 100px;
-    margin-top: 20px;
-}
-
+    margin:100px;
+    margin-top:20px;
+  }
 .panel-default {
-    opacity: 0.8;
-    /*margin-top:30px;*/
+opacity: 0.8;
+/*margin-top:30px;*/
 }
-
-.input-group-addon {
+.input-group-addon
+{
     background-color: #C16266;
     border-color: #C16266;
     color: rgb(255, 255, 255);
 }
-
-.form-control:focus {
+.form-control:focus
+{
     background-color: #C16266;
     border-color: #C16266;
     color: rgb(255, 255, 255);
 }
 
 .panel-primary {
-    border-color: #C16266;
+  border-color: #C16266;
 }
 
 .form-control {
-    /*color: #fff;*/
+  /*color: #fff;*/
 }
 
+
+.btn-facebook {
+  background-color: #3B5998;
+  color: #fff;
+}
+
+.btn-log-facebook {
+  width: 25px;
+  height: 25px;
+  margin: 0px 5px 0px 0px;
+}
+
+
 .btn-primary {
-    background-color: #C16266;
-    border-color: #C16266;
+  background-color: #C16266;
+  border-color: #C16266;
+}
+
+
+.sign-in {
+  margin: 50px 0px;
 }
 
 .header-img-profile-container {
-    border-radius: 360px;
-    height: 30px;
-    width: 30px;
+  border-radius: 360px;
+  height: 25px;
+  width: 25px;
+
+.header-img-profile-container {
+  border-radius: 360px;
+  height: 30px;
+  width: 30px;
+
 }
 
 .header-img-profile {
-    border-radius: 360px;
-    height: 40px;
-    width: 40px;
+  border-radius: 360px;
+
+  height: 30px;
+  width: 30px;
+
+  height: 40px;
+  width: 40px;
+
 }
 
 .ingredients-list {
-    padding: 20px 200px 20px 100px;
-    font-weight: 300;
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-    font-size: 25px;
-    color: #C16266;
+  padding: 20px 200px 20px 100px;
+  font-weight: 300;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 25px;
+  color: #C16266;
 }
 
 .aditional-info {
-    padding: 20px 50px 20px 0px;
-    font-weight: 300;
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-    font-size: 20px;
-    color: #C16266;
+  padding: 20px 50px 20px 0px;
+  font-weight: 300;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 20px;
+  color: #C16266;
 }
 
-.nutritional-info {
-    font-weight: 100;
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-    font-size: 15px;
-    padding: 0px 0px 0px 0px;
-    color: #2B2C28;
-    display: inline;
+.nutritional-info{
+  font-weight: 100;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 15px;
+  padding: 0px 0px 0px 0px;
+  color: #2B2C28;
+  display: inline;
 }
 
 .nutritional-title {
-    font-size: 30px;
-    margin: 25px 0px 30px 0px;
+  font-size: 30px;
+  margin: 25px 0px 30px 0px;
 }
 
 .nutritional-info-value {
-    font-weight: 400;
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-    font-size: 15px;
-    padding: 0px 0px 0px 0px;
-    color: #2B2C28;
-    display: inline;
+  font-weight: 400;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 15px;
+  padding: 0px 0px 0px 0px;
+  color: #2B2C28;
+  display: inline;
 }
 
 .ingredients-list li {
-    list-style-type: none;
-    border-bottom: 1px solid #C5C6C4;
-    font-weight: 100;
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-    font-size: 15px;
-    padding: 15px 0px 15px 0px;
-    color: #2B2C28;
+  list-style-type: none;
+  border-bottom: 1px solid #C5C6C4;
+  font-weight: 100;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 15px;
+  padding: 15px 0px 15px 0px;
+  color: #2B2C28;
 }
 
 .info-food-each {
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-    font-size: 20px;
-    margin: 40px 0px 40px 20px;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 20px;
+  margin: 40px 0px 40px 20px;
 }
 
 .food-likes-each {
-    display: inline-flex;
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-    font-size: 20px;
-    margin: 0px 40px 0px 10px;
-    color: #2B2C28;
-    font-weight: 300;
+  display: inline-flex;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 20px;
+  margin: 0px 40px 0px 10px;
+  color: #2B2C28;
+  font-weight: 300;
 }
 
 .element-benefit {
-    border: 1px solid #C16266;
-    padding: 0px 10px;
-    border-radius: 10px;
-    font-size: 12px;
+  border: 1px solid #C16266;
+  padding: 0px 10px;
+  border-radius: 10px;
+  font-size: 12px;
 }
 
 .recipe-save {
-    background-color: #C16266;
-    border: 1px solid #C16266;
-    color: #fff;
-    display: inline-flex;
-    height: auto;
-    padding: 4vh 9vh;
-    border-radius: 4px;
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-    font-size: 20px;
-    font-weight: 100;
-    margin: 3vh 3vh 0px 0px;
+  background-color: #C16266;
+  border: 1px solid #C16266;
+  color: #fff;
+  display: inline-flex;
+  height: auto;
+  padding: 4vh 9vh;
+  border-radius: 4px;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+  margin: 3vh 3vh 0px 0px;
 }
 
 .step-by-step-list {
-    padding: 20px 200px 20px 100px;
-    font-weight: 300;
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-    font-size: 25px;
-    color: #C16266;
+  padding: 20px 200px 20px 100px;
+  font-weight: 300;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 25px;
+  color: #C16266;
 }
 
 .step-by-step-list li {
-    list-style-type: decimal;
-    font-weight: 100;
-    font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
-    font-size: 15px;
-    padding: 7px 0px 7px 0px;
-    color: #2B2C28;
+  list-style-type: decimal;
+  font-weight: 100;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 15px;
+  padding: 7px 0px 7px 0px;
+  color: #2B2C28;
+
+}
+
+.show-all-recipes{
+  margin: 2vh 0px 0px 0px;
+}
+
+.list-all-recipes {
+  margin: 0px 0px 0px 0vh;
+
 }

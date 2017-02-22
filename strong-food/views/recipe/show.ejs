@@ -1,11 +1,12 @@
 <div class="container">
-    <div class="row">
-        <div class="col-sm-0 col-md-2 filters">
-            <h1>FILTERS</h1>
-            <form action="">
-                <div class="checkbox">
-                    <h4 class="filter-title">Type</h4>
-                    <label>
+
+  <div class="row show-all-recipes">
+    <div class="col-sm-0 col-md-2 filters">
+      <h1>FILTERS</h1>
+      <form action="">
+        <div class="checkbox">
+          <h4 class="filter-title">Type</h4>
+          <label>
             <input type="checkbox" value="" name="vegetarian">
             Vegetarian
           </label><br />
@@ -67,29 +68,27 @@
           <input type="checkbox" value="" name="MasterChef">
           MasterChef
         </label><br />
-                </div>
-            </form>
-        </div>
-        <div class="col-sm-12 col-md-10">
-            <%recipes.forEach(function(elem){%>
-                <div class="col-sm-6 col-md-4 recipe-div">
-                    <a href="recipes/<%=elem._id%>">
-                        <div class="thumbnail">
-                            <div class="img-container">
-                                <img src="<%=elem.imgUrl%>" alt="" class="img-food">
-                            </div>
-                            <div class="caption">
-                                <h4 class="food-title"><%=elem.name%></h4>
-                                <h5 class="food-dificulty"><%=elem.preparation.dificulty%> | </h5>
-                                <h5 class="food-subtitle"> | Calories: <%=elem.nutritionalInfo.calories%></h5>
-                                <div class="info-food">
-                                    <span class="glyphicon glyphicon-thumbs-up icon" aria-hidden="true"></span>
-                                    <h6 class="food-likes"><%=elem.likes%></h6>
-                                    <span class="glyphicon glyphicon-heart icon" aria-hidden="true"></span>
-                                    <h6 class="food-likes"><%=elem.usersSaved.length%></h6>
-                                    <span class="glyphicon glyphicon-cutlery icon" aria-hidden="true"></span>
-                                    <h6 class="food-likes"><%=elem.usersDone.length%></h6>
-                                </div>
+
+      </div>
+      </form>
+    </div>
+    <div class="col-sm-12 col-md-10 list-all-recipes">
+      <%recipes.forEach(function(elem){%>
+      <div class="col-sm-6 col-md-4 recipe-div">
+        <a href="recipes/<%=elem._id%>">
+        <div class="thumbnail">
+          <div class="img-container">
+            <img src="<%=elem.imgUrl%>" alt="" class="img-food">
+          </div>
+          <div class="caption">
+            <h4 class="food-title"><%=elem.name%></h4>
+            <h5 class="food-dificulty"><%=elem.preparation.dificulty%> | </h5><h5 class="food-subtitle"> | Calories: <%=elem.nutritionalInfo.calories%></h5>
+            <div class="info-food">
+              <span class="glyphicon glyphicon-thumbs-up icon" aria-hidden="true"></span><h6 class="food-likes"><%=elem.likes%></h6>
+              <span class="glyphicon glyphicon-heart icon" aria-hidden="true"></span><h6 class="food-likes"><%=elem.usersSaved.length%></h6>
+              <span class="glyphicon glyphicon-cutlery icon" aria-hidden="true"></span><h6 class="food-likes"><%=elem.usersDone.length%></h6>
+            </div>
+
 
                             </div>
                         </div>

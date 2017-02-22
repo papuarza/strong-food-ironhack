@@ -1,21 +1,47 @@
-<div class="container">
+
+<div class="container sign-in">
     <div class="row">
-        <div class="col-sm-6 centered-form">
-            <form action="/signup" method="post">
-                <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" name="username" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="text" name="email" class="form-control">
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" name="password" class="form-control">
-                </div>
-                <button type="submit">Signup</button>
-            </form>
+        <div class="col-md-5 col-md-offset-4">
+        <div>
+        <div class="panel panel-primary">
+
+            <h3 class="text-center">
+                        SignUp</h3>
+    <form method="POST" action="/signup">
+      <div class="panel-body">
+
+                  <div class="form-group">
+                      <div class="input-group">
+                          <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span>
+                          </span>
+                          <input type="text" name="username" class="form-control" placeholder="Username" required />
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <div class="input-group">
+                          <span class="input-group-addon"><span class="glyphicon glyphicon-menu-hamburger"></span></span>
+                          <input type="email" class="form-control" placeholder="Email" name="email" required/>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <div class="input-group">
+                          <span class="input-group-addon"><span class="glyphicon glyphicon-menu-hamburger"></span></span>
+                          <input type="password" class="form-control" placeholder="Password" name="password" required/>
+                      </div>
+                  </div>
+                      <button class="btn btn-lg btn-primary btn-block" type="submit">
+    SignUp
+  </button>
+  <button class="btn btn-lg btn-block btn-facebook" type="submit"><img src="img/facebook-logo.png" alt="" class="btn-log-facebook">
+Facebook Sign Up
+</button>
+
+
+    </div>
+    </form>
+
+       </div>
         </div>
     </div>
+</div>
 </div>

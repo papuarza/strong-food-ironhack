@@ -8,13 +8,33 @@
     <script src="/bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
     <script src="/javascripts/save-recipe.js" type="text/javascript"></script>
     <link rel="stylesheet" href="/stylesheets/style.css">
-</head>
-
-<body>
-    <nav class="navbar">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#home-nav" aria-expanded="false">
+  </head>
+  <body>
+  <nav class="navbar">
+          <div class="col-xs-6"><a href="/">
+            <img class="nav-logo-image" src="http://www.brandcrowd.com/gallery/brands/pictures/picture14172119231724.png" alt="Strong-Food Logo">
+            <span>StrongFood</span>
+          </div></a>
+          <ul class="col-xs-6 right-nav">
+            <%if (typeof(user) === "undefined"){%>
+              <li class="nav-item"><a href="/login">Login</a></li>
+              <li class="nav-item"><a href="/signup">Signup</a></li>
+            <%}%>
+            <%if (typeof(user) !== "undefined"){%>
+              <li class="nav-item">
+                <form action="/logout" method="POST" >
+                  <button class="header-form" type="submit" href="/signup">Logout</a>
+                </form>
+              </li>
+              <li class="nav-item"><a href="/profile"><%=user.username%></a></li>
+              <li class="nav-item-profilepic">
+                <div class="header-img-profile-container"><img src="<%=user.imgUrl%>" alt="" class="header-img-profile"></div>
+              </li>
+            <%}%>
+          </ul>
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#home-nav" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -56,6 +76,35 @@
     <div class="main-container">
       <%- body -%>
     </div>
+
+    <div class="footer">
+      <div class="main-footer row">
+        <div class="col-xs-5">
+          <h4 class="footer-title-first-col">StrongFood</h4>
+          <p class="footer-text-first-col">
+            At StrongFood we want to offer you the best recipes available on the market, with the comments and opinions of people all over the world.
+          </p>
+        </div>
+        <div class="col-xs-5 sitemap">
+          <h4 class="footer-title-first-col">Sitemap</h4>
+          <ul class="sitemap-list">
+            <li>Home</li>
+            <li>User</li>
+            <li>Recipes</li>
+          </ul>
+        </div>
+        <div class="col-xs-2 social-col">
+          <img src="img/facebook-logo.png" alt="" class="rrss-logo">
+          <img src="img/github-sign.png" alt="" class="rrss-logo">
+          <img src="img/instagram-logo.png" alt="" class="rrss-logo">
+          <img src="img/twitter-logo.png" alt="" class="rrss-logo">
+        </div>
+      </div>
+      <div class="sub-footer row">
+        <div class="col-xs-12">Ironhack Web Development Bootcamp&nbsp;&nbsp;  | &nbsp;&nbsp; Carlos Suazo - Victor Arza</div>
+      </div>
+    </div>
+
     <div class="sub-footer col-xs-12">
       <p>
         Ironhack Web Development Bootcamp
@@ -64,6 +113,7 @@
     <footer class="footer">
 
     </footer>
+
     <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
 
   </body>

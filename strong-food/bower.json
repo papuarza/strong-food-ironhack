@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "name": "strong-food",
     "description": "strong food app",
     "main": "",
@@ -15,4 +16,23 @@
         "jquery": "^3.1.1",
         "bootstrap": "^3.3.7"
     }
+=======
+  "name": "strong-food",
+  "description": "strong food app",
+  "main": "",
+  "license": "MIT",
+  "homepage": "https://github.com/papuarza/linked_repo",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "bootstrap": "^3.3.7",
+    "chart.js": "^2.5.0"
+  }
+>>>>>>> papusbranch
 }

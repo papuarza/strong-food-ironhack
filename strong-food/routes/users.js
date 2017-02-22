@@ -10,6 +10,10 @@ const User = require('../models/user');
 const Recipe = require('../models/recipes');
 const Relation = require('../models/relationSchema');
 
+var multer  = require('multer');
+var upload = multer({ dest: './public/uploads/' });
+
+
 router.get('/login', ensureLoggedOut(), (req, res) => {
     res.render('user/login');
 });
@@ -31,6 +35,19 @@ router.post('/logout', ensureLoggedIn(), (req, res) => {
     req.logout();
     res.redirect('/');
 });
+
+
+router.post('/upload', ensureLoggedIn(), upload.single('profilePic'), (req, res) => {
+    imgUrl = "uploads/"+req.file.filename;
+    userId = req.user._id;
+    User.findByIdAndUpdate(userId, {imgUrl}, (err, product) => {
+    if (err){ return next(err); }
+    console.log("editado")
+    return res.redirect('/profile');
+  });
+
+});
+
 
 router.get('/profile', ensureLoggedIn(), (req, res) => {
     user = req.user;
@@ -78,16 +95,26 @@ router.get('/edit/:id', ensureLoggedIn(), (req, res) => {
 });
 
 router.post('/edit/:id', (req, res, next) => {
-    const id = req.params.id;
-    const body = req.body;
-    const {
-        username,
-        email,
-        birthday,
-        height,
-        weigth,
-        genere
-    } = body;
+
+
+  userId = req.user._id;
+  body = req.body;
+  console.log(body);
+  // User.findByIdAndUpdate(userId, {imgUrl}, (err, product) => {
+  // if (err){ return next(err); }
+  // console.log("editado")
+  return res.redirect('/profile');
+// });
+});
+
+router.get('/wod', (req, res) => {
+  res.render('user/wod')
+});
+
+  const id = req.params.id
+  const body = req.body
+  const {username, email, birthday, height, weigth, genere} = body
+
 
     const criteria = {
         _id: id
@@ -112,6 +139,7 @@ router.post('/edit/:id', (req, res, next) => {
         });
     });
 });
+
 
 
 
