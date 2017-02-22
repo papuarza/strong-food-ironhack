@@ -2,10 +2,7 @@
 const express = require('express');
 const router = express.Router();
 const passport = require('passport');
-const {
-    ensureLoggedIn,
-    ensureLoggedOut
-} = require('connect-ensure-login');
+const { ensureLoggedIn, ensureLoggedOut } = require('connect-ensure-login');
 const User = require('../models/user');
 const Recipe = require('../models/recipes');
 const Relation = require('../models/relationSchema');
@@ -48,11 +45,10 @@ router.post('/upload', ensureLoggedIn(), upload.single('profilePic'), (req, res)
 
 });
 
-
 router.get('/profile', ensureLoggedIn(), (req, res) => {
     user = req.user;
     const recipesSaved = [];
-    console.log(user);
+    const recipesCooked = [];
     Relation.find({
         user: req.user._id
     }, (err, relation) => {
@@ -65,19 +61,28 @@ router.get('/profile', ensureLoggedIn(), (req, res) => {
                     return next(err);
                 }
                 if (indexOf < arr.length - 1) {
-                    recipesSaved.push(recipes.recipe);
+                    if(recipes.recipe.cooked){
+                      recipesCooked.push(recipes.recipe)
+                    } else {
+                      recipesSaved.push(recipes.recipe)
+                    }
+
                 } else {
-                    recipesSaved.push(recipes.recipe);
+                  if(recipes.recipe.cooked){
+                    recipesCooked.push(recipes.recipe)
+                  } else {
+                    recipesSaved.push(recipes.recipe)
+                  }
+                  console.log(recipesSaved)
                     res.render('user/profile', {
                         user: user,
-                        recipesSaved: recipesSaved
+                        recipesSaved: recipesSaved,
+                        recipesCooked: recipesCooked
                     });
                 }
             });
         });
     });
-
-
 
 });
 
@@ -95,16 +100,29 @@ router.get('/edit/:id', ensureLoggedIn(), (req, res) => {
 });
 
 router.post('/edit/:id', (req, res, next) => {
-
-
   userId = req.user._id;
   body = req.body;
-  console.log(body);
-  // User.findByIdAndUpdate(userId, {imgUrl}, (err, product) => {
-  // if (err){ return next(err); }
-  // console.log("editado")
+  username = req.body.username;
+  email = req.body.email;
+  birthday = req.body.birthday;
+  heigth = req.body.heigth;
+  weight = req.body.weight;
+  genere = req.body.genere;
+  user = {
+    username : username,
+    email : email,
+    birthday : birthday,
+    heigth : heigth,
+    weight : weight,
+    genere : genere
+  }
+  console.log(user)
+
+  User.update({_id: userId}, {$set: {user}}, (err, product) => {
+  if (err){ return next(err); }
+  console.log("////////////////////////////////////////////////////// EDITADO: "+product)
   return res.redirect('/profile');
-// });
+});
 });
 
 router.get('/wod', (req, res) => {
@@ -139,8 +157,5 @@ router.get('/wod', (req, res) => {
         });
     });
 });
-
-
-
 
 module.exports = router;

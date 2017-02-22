@@ -2,11 +2,8 @@
 const express = require('express');
 const router = express.Router();
 const passport = require('passport');
-const {
-    ensureLoggedIn,
-    ensureLoggedOut
-} = require('connect-ensure-login');
-const Recipe = require('../models/recipes');
+const { ensureLoggedIn, ensureLoggedOut } = require('connect-ensure-login');
+const Recipe = require('../models/recipes')
 const Relation = require('../models/relationSchema');
 
 router.get('/create', ensureLoggedOut(), (req, res) => {
@@ -55,6 +52,7 @@ router.post('/save-recipe', (req, res) => {
     });
 });
 
+<<<<<<< HEAD
 
 router.get('/recipes/:id', (req, res) => {
     const id = req.params.id;
@@ -66,6 +64,32 @@ router.get('/recipes/:id', (req, res) => {
             recipe
         });
     });
+=======
+router.post('/save-recipe', (req, res) => {
+    const recipe = req.body.recipeId;
+    const user = req.user._id;
+    const cooked = false;
+    const elem = {
+        user,
+        recipe,
+        cooked
+    };
+    const relation = new Relation(elem);
+    relation.save(function(err, doc) {
+        if (err) return next(err);
+        console.log("guardado");
+    });
+});
+
+router.get('/recipes/:id', ensureLoggedIn(), (req, res) => {
+  const id = req.params.id
+  console.log(id)
+  Recipe.findOne({_id: id}, function (err, recipe) {
+    console.log(recipe)
+    if (err) return next(err)
+    res.render('recipe/show-one', {recipe})
+  })
+>>>>>>> papusbranch2
 });
 
 
