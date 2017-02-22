@@ -12,6 +12,12 @@
       </form>
     </div>
     <div class="col-sm-12 col-md-6">
+    <div class="col-sm-12 col-md-4">
+      <div class="profile-pic-container">
+        <img src="<%=user.imgUrl%>" alt="" class="profile-pic">
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-8">
       <h2 class="username-profile"> <%=user.username%></h2>
       <h3 class="email-profile"><%=user.email%></h3>
       <h3 class="info-profile">Age&nbsp;&nbsp;<strong> <%=user.birthday.getFullYear()%></strong> &nbsp;&nbsp;| </h3>
@@ -32,6 +38,7 @@
     <div class="col-sm-12 col-md-3">
     <canvas id="myChart" width="100%" height="auto"></canvas>
     </div>
+
   </div>
   <h3 class="latest-title">COOKED RECIPES</h3>
   <h4 class="latest-subtitle">CHECK THE MOST YUMMY COOKED RECIPES</h4>
@@ -87,4 +94,5 @@
               <%})%>
       </div>
 </div>
+
 <script src="javascripts/chart.js" type="text/javascript"></script>

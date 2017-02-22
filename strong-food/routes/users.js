@@ -3,8 +3,10 @@ const router  = express.Router();
 const passport = require('passport');
 const { ensureLoggedIn, ensureLoggedOut } = require('connect-ensure-login');
 const User = require('../models/user')
+
 var multer  = require('multer');
 var upload = multer({ dest: './public/uploads/' });
+
 
 router.get('/login', ensureLoggedOut(), (req, res) => {
     res.render('user/login');
@@ -30,6 +32,7 @@ router.post('/logout', ensureLoggedIn(), (req, res) => {
     res.redirect('/');
 });
 
+
 router.post('/upload', ensureLoggedIn(), upload.single('profilePic'), (req, res) => {
     imgUrl = "uploads/"+req.file.filename;
     userId = req.user._id;
@@ -40,6 +43,7 @@ router.post('/upload', ensureLoggedIn(), upload.single('profilePic'), (req, res)
   });
 
 });
+
 
 router.get('/profile', ensureLoggedIn(), (req, res) => {
     user = req.user;
@@ -57,6 +61,7 @@ router.get('/edit/:id', ensureLoggedIn(), (req, res) => {
 });
 
 router.post('/edit/:id', (req, res, next) => {
+
   userId = req.user._id;
   body = req.body;
   console.log(body);
@@ -70,6 +75,23 @@ router.post('/edit/:id', (req, res, next) => {
 router.get('/wod', (req, res) => {
   res.render('user/wod')
 });
+
+  const id = req.params.id
+  const body = req.body
+  const {username, email, birthday, height, weigth, genere} = body
+
+  const criteria = {_id: id}
+  const update = {$set: {username, email, birthday, height, weigth, genere}}
+
+  User.updateOne(criteria, update, function (err, user) {
+    if (err) return next(err)
+    user = req.user;
+    console.log(user)
+    res.render('user/profile', {user});
+  })
+});
+
+
 
 
 module.exports = router;
