@@ -3,6 +3,8 @@ const router  = express.Router();
 const passport = require('passport');
 const { ensureLoggedIn, ensureLoggedOut } = require('connect-ensure-login');
 const User = require('../models/user')
+var multer  = require('multer');
+var upload = multer({ dest: './public/uploads/' });
 
 router.get('/login', ensureLoggedOut(), (req, res) => {
     res.render('user/login');
@@ -28,6 +30,17 @@ router.post('/logout', ensureLoggedIn(), (req, res) => {
     res.redirect('/');
 });
 
+router.post('/upload', ensureLoggedIn(), upload.single('profilePic'), (req, res) => {
+    imgUrl = "uploads/"+req.file.filename;
+    userId = req.user._id;
+    User.findByIdAndUpdate(userId, {imgUrl}, (err, product) => {
+    if (err){ return next(err); }
+    console.log("editado")
+    return res.redirect('/profile');
+  });
+
+});
+
 router.get('/profile', ensureLoggedIn(), (req, res) => {
     user = req.user;
     console.log(user)
@@ -44,21 +57,19 @@ router.get('/edit/:id', ensureLoggedIn(), (req, res) => {
 });
 
 router.post('/edit/:id', (req, res, next) => {
-  const id = req.params.id
-  const body = req.body
-  const {username, email, birthday, height, weigth, genere} = body
-
-  const criteria = {_id: id}
-  const update = {$set: {username, email, birthday, height, weigth, genere}}
-
-  User.updateOne(criteria, update, function (err, user) {
-    if (err) return next(err)
-    user = req.user;
-    console.log(user)
-    res.render('user/profile', {user});
-  })
+  userId = req.user._id;
+  body = req.body;
+  console.log(body);
+  // User.findByIdAndUpdate(userId, {imgUrl}, (err, product) => {
+  // if (err){ return next(err); }
+  // console.log("editado")
+  return res.redirect('/profile');
+// });
 });
 
+router.get('/wod', (req, res) => {
+  res.render('user/wod')
+});
 
 
 module.exports = router;
