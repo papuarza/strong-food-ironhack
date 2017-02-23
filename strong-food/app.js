@@ -13,6 +13,7 @@ const MongoStore = require('connect-mongo')(session);
 const users = require('./routes/users.js');
 const index = require('./routes/index');
 const recipe = require('./routes/recipe');
+const routines = require('./routes/routines');
 const LocalStrategy = require('passport-local').Strategy;
 const User = require('./models/user');
 const bcrypt = require('bcrypt');
@@ -141,6 +142,7 @@ app.use((req, res, next) => {
 app.use('/', index);
 app.use('/', users);
 app.use('/', recipe);
+app.use('/', routines);
 
 app.use((req, res, next) => {
     const err = new Error('Not Found');

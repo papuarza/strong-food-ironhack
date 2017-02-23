@@ -2,6 +2,16 @@ a {
   color: #00B7FF;
 }
 
+.img-main-fitness {
+  background-image: url('https://kite.sista.zone/wp-content/uploads/sites/3/2016/04/largehiit.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 90vh;
+  width: 100%;
+  background-repeat: no-repeat;
+}
+
+
 button:hover{
   text-decoration: none;
 }
@@ -9,6 +19,13 @@ button:hover{
 .upload-profile-pic {
   margin: 0px 0px 0px 22%;
   /*text-align: ;*/
+}
+
+.fitness-first-row {
+  background-image: url('http://movetica.de/templates/Movetica/themes/bootstrap/img/wow/images/skins.jpg');
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .upload-pic {
@@ -55,6 +72,46 @@ button:hover{
   font-size: 20px;
   font-weight: 100;
   margin: 3vh 3vh 0px 0px;
+}
+
+.rutine-log{
+  padding: 0px 100px 0px 30px;
+  text-align: center;
+}
+
+.show-rutine {
+  background-color: #000;
+  border: 1px solid #000;
+  color: #fff;
+  display: inline-flex;
+  height: auto;
+  padding: 3vh 9vh;
+  border-radius: 4px;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 30px;
+  font-weight: 100;
+  margin: 10vh 3vh 10vh 30vh;
+  cursor: pointer;
+}
+
+.show-rutine button {
+  background-color: #000;
+  border: 0px;
+}
+
+.fitness-btn {
+  background-color: #fff;
+  border: 1px solid #fff;
+  color: #2B2C28;
+  display: inline-flex;
+  height: auto;
+  padding: 3vh 9vh;
+  border-radius: 4px;
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 30px;
+  font-weight: 100;
+  margin: 3vh 3vh 10vh 0px;
+
 }
 
 /* public/stylesheets/styles.css */
@@ -202,17 +259,43 @@ a:visited {
   font-size: 60px;
 }
 
+.fitness-row-title {
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 80px;
+  font-weight: 300;
+  color: #FFF;
+  line-height: 80px;
+}
+.fitness-row-title-strong {
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 100px;
+  color: #FFF;
+  font-weight: 500;
+  line-height: 100px;
+}
+
 .last-row-subtitle {
   font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
   font-size: 35px;
   font-weight: 100;
 }
 
+.fitness-row-subtitle {
+  font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif;
+  font-size: 35px;
+  font-weight: 100;
+  color: #fff;
+}
+
 .last-row-wrapper{
   padding: 0px 100px;
   text-align: center;
   margin: 50px 0px 0px 0px;
-
+}
+.fitness-row-wrapper{
+  padding: 0px 100px;
+  text-align: left;
+  margin: 90px 0px 0px 30px;
 }
 
 .last-about-row {

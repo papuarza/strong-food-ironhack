@@ -7,23 +7,23 @@
         <div class="checkbox">
           <h4 class="filter-title">Type</h4>
           <label>
-            <input type="checkbox" value="" name="vegetarian">
+            <input type="checkbox" value="" name="vegetarian" class="filter-type">
             Vegetarian
           </label><br />
                     <label>
-            <input type="checkbox" value="" name="vegan">
+            <input type="checkbox" value="" name="vegan" class="filter-type">
             Vegan
           </label><br />
                     <label>
-            <input type="checkbox" value="" name="glutenFree">
+            <input type="checkbox" value="" name="glutenFree" class="filter-type">
             Gluten Free
           </label><br />
                     <label>
-            <input type="checkbox" value="" name="diaryFree">
+            <input type="checkbox" value="" name="diaryFree" class="filter-type">
             Diary Free
           </label><br />
                     <label>
-            <input type="checkbox" value="" name="veryHealthy">
+            <input type="checkbox" value="" name="veryHealthy" class="filter-type">
             Very Healthy
           </label><br />
                 </div>
@@ -31,51 +31,14 @@
                     <h4 class="filter-title">Max. Calories</h4>
                     <input id="ex1" data-slider-id='ex1Slider' type="text" data-slider-min="0" data-slider-max="20" data-slider-step="1" data-slider-value="14" />
                 </div>
-                <div class="checkbox">
-                    <h4 class="filter-title">Dish Type</h4>
-                    <label>
-          <input type="checkbox" value="" name="mainCourse">
-          Main Course
-        </label><br />
-                    <label>
-          <input type="checkbox" value="" name="sideDish">
-          Side Dish
-        </label><br />
-                    <label>
-          <input type="checkbox" value="" name="Dessert">
-          Dessert
-        </label><br />
-                    <label>
-          <input type="checkbox" value="" name="Appetizer">
-          Appetizer
-        </label><br />
-                    <label>
-          <input type="checkbox" value="" name="Salad">
-          Salad
-        </label><br />
-                </div>
-                <div class="checkbox">
-                    <h4 class="filter-title">Dificulty</h4> SuperStarterChef", "ChefWannaBe", "MasterChef
-                    <label>
-          <input type="checkbox" value="" name="SuperStarterChef">
-          SuperStarterChef
-        </label><br />
-                    <label>
-          <input type="checkbox" value="" name="ChefWannaBe">
-          ChefWannaBe
-        </label><br />
-                    <label>
-          <input type="checkbox" value="" name="MasterChef">
-          MasterChef
-        </label><br />
 
-      </div>
+
       </form>
     </div>
     <div class="col-sm-12 col-md-10 list-all-recipes">
       <%recipes.forEach(function(elem){%>
       <div class="col-sm-6 col-md-4 recipe-div">
-        <a href="recipes/<%=elem._id%>">
+        <a href="recipes/<%=elem._id%>" class="link-recipe">
         <div class="thumbnail">
           <div class="img-container">
             <img src="<%=elem.imgUrl%>" alt="" class="img-food">
@@ -99,3 +62,4 @@
 
     </div>
 </div>
+<script src="/javascripts/filter-recipes.js"></script>

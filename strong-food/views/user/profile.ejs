@@ -49,55 +49,20 @@
               <span class="glyphicon glyphicon-heart icon" aria-hidden="true"></span><h6 class="food-likes"><%=elem.usersSaved.length%></h6>
               <span class="glyphicon glyphicon-cutlery icon" aria-hidden="true"></span><h6 class="food-likes"><%=elem.usersDone.length%></h6>
             </div>
-            <div class="buttons-row">
-                <a href="/show-recipes">
-                    <div class="recipes-look">LOOK RECIPES</div>
-                </a>
-                <a href="edit/<%=user._id%>">
-                    <div class="edit-profile">Edit Profile</div>
-                </a>
-            </div>
-        </div>
-    </div>
-    <h3 class="latest-title">COOKED RECIPES</h3>
-    <h4 class="latest-subtitle">CHECK THE MOST YUMMY COOKED RECIPES</h4>
-    <div class="row">
-        <div class="col-sm-12 col-md-10">
-            <%user.recipesDone.forEach(function(elem){%>
-                <div class="col-sm-6 col-md-4 recipe-div">
-                    <a href="recipes/<%=elem._id%>">
-                        <div class="thumbnail">
-                            <div class="img-container">
-                                <img src="<%=elem.imgUrl%>" alt="" class="img-food">
-                            </div>
-                            <div class="caption">
-                                <h4 class="food-title"><%=elem.name%></h4>
-                                <h5 class="food-dificulty"><%=elem.preparation.dificulty%> | </h5>
-                                <h5 class="food-subtitle"> | Calories: <%=elem.nutritionalInfo.calories%></h5>
-                                <div class="info-food">
-                                    <span class="glyphicon glyphicon-thumbs-up icon" aria-hidden="true"></span>
-                                    <h6 class="food-likes"><%=elem.likes%></h6>
-                                    <span class="glyphicon glyphicon-heart icon" aria-hidden="true"></span>
-                                    <h6 class="food-likes"><%=elem.usersSaved.length%></h6>
-                                    <span class="glyphicon glyphicon-cutlery icon" aria-hidden="true"></span>
-                                    <h6 class="food-likes"><%=elem.usersDone.length%></h6>
-                                </div>
-
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <%})%>
           </div>
         </div>
+        </a>
+      </div>
+            <%})%>
     </div>
+  </div>
     <h3 class="latest-title">SAVED RECIPES</h3>
     <h4 class="latest-subtitle">CHECK THE MOST YUMMY SAVED RECIPES</h4>
     <div class="row">
       <div class="col-sm-12 col-md-10">
         <%recipesSaved.forEach(function(elem){%>
         <div class="col-sm-6 col-md-4 recipe-div">
-          <input class="recipe-id-saved" value="<%=recipe._id%>" hidden="true"></input>
+          <input class="recipe-id-saved" value="<%=elem._id%>" hidden="true"></input>
           <a href="recipes/<%=elem._id%>">
           <div class="thumbnail saved-recipes">
             <div class="img-container">
@@ -110,7 +75,6 @@
           </a>
           <a href="#" class="recipes-cooked-button"><div class="cooked-button">COOKED</div></a>
         </div>
-
               <%})%>
       </div>
 </div>

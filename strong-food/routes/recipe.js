@@ -29,11 +29,36 @@ router.post('/get-recipes', (req, res) => {
 router.get('/show-recipes', (req, res) => {
     Recipe.find({}, function(err, recipes) {
         if (err) return next(err);
-        // console.log(recipes)
         res.render('recipe/show', {
             recipes
         });
     });
+});
+
+router.post('/show-recipes', (req, res, next) => {
+    console.log(req.body);
+    filter = req.body;
+    filterKeys = Object.keys(filter);
+    filterArr = [];
+    filterArr = filterKeys.map(function(elem){
+      newObj = {};
+      newObj[elem] = true;
+      return newObj;
+    });
+    console.log(filterArr.length)
+    console.log(filterArr);
+    if(filterArr.length > 0) {
+      Recipe.find({ $or: filterArr }, function(err, recipes) {
+          if (err) return next(err);
+          res.status(200).send({recipes});
+      });
+    } else {
+      Recipe.find({}, function(err, recipes) {
+          if (err) return next(err);
+          res.status(200).send({recipes});
+      });
+    }
+
 });
 
 router.post('/save-recipe', (req, res) => {
@@ -52,19 +77,6 @@ router.post('/save-recipe', (req, res) => {
     });
 });
 
-<<<<<<< HEAD
-
-router.get('/recipes/:id', (req, res) => {
-    const id = req.params.id;
-    Recipe.findOne({
-        _id: id
-    }, function(err, recipe) {
-        if (err) return next(err);
-        res.render('recipe/show-one', {
-            recipe
-        });
-    });
-=======
 router.post('/save-recipe', (req, res) => {
     const recipe = req.body.recipeId;
     const user = req.user._id;
@@ -89,7 +101,6 @@ router.get('/recipes/:id', ensureLoggedIn(), (req, res) => {
     if (err) return next(err)
     res.render('recipe/show-one', {recipe})
   })
->>>>>>> papusbranch2
 });
 
 
